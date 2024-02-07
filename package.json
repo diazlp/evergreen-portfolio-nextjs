@@ -1,12 +1,16 @@
 {
-  "name": "evergreen-portfolio-nextjs",
+  "name": "personal-portfolio-nextjs",
   "version": "0.1.0",
+  "description": "My personal portfolio written in Next.js TypeScript.",
   "private": true,
+  "author": "Diaz Linggaputra",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.2.0",
@@ -25,8 +29,15 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
+    "husky": "^9.0.10",
     "postcss": "^8",
+    "prettier": "^3.2.5",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format && git add ."
+    }
   }
 }
