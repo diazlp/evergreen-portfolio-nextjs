@@ -18,7 +18,12 @@ import { useTranslation } from 'react-i18next'
 import { ReactTyped } from 'react-typed'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { MdOutlineFileDownload } from 'react-icons/md'
-import { GITHUB_LINK, LINKEDIN_LINK } from '@/utils/constants'
+import {
+  GITHUB_LINK,
+  LINKEDIN_LINK,
+  CV_LINK_INTERNAL,
+  CV_LINK_EXTERNAL,
+} from '@/utils/constants'
 
 const variants: Variants = {
   hidden: {
@@ -43,6 +48,11 @@ const variants: Variants = {
 
 export default function HomeSection(): React.ReactNode {
   const { t } = useTranslation()
+
+  // const onDownloadCVHandler = () => {
+  //   const url = './diazlinggaputra-cv.pdf'
+  //   window.open(url, '_blank')
+  // }
 
   return (
     <Container
@@ -70,7 +80,7 @@ export default function HomeSection(): React.ReactNode {
           align="start"
           w={{ base: '100%', md: '50%' }}
           py={{ base: 20, md: 0 }}
-          // userSelect="none"
+          userSelect="none"
         >
           <Heading as="h1">
             <ReactTyped
@@ -117,7 +127,14 @@ export default function HomeSection(): React.ReactNode {
                 Github
               </Button>
             </Link>
-            <Link href={GITHUB_LINK} isExternal>
+            <Link
+              as={'a'}
+              href={CV_LINK_EXTERNAL}
+              isExternal
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => window.open(CV_LINK_INTERNAL, '_blank')}
+            >
               <Button
                 colorScheme="brand"
                 variant="ghost"
