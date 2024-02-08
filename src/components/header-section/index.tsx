@@ -15,6 +15,7 @@ export default function HeaderSection(): React.ReactNode {
       align="center"
       alignItems="center"
       w="100%"
+      backdropFilter="blur(3px)"
     >
       <ThemeButtonComponent />
 

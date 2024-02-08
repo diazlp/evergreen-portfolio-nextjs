@@ -21,7 +21,7 @@ export default function HeaderSection(): React.ReactNode {
             style={{ position: 'absolute', bottom: 0, width: '50%', zIndex: 1 }}
             initial={{ x: selectedTab === 0 ? '100%' : '0%' }}
             animate={{ x: selectedTab === 0 ? '0%' : '100%' }}
-            transition={{ type: 'tween', duration: 1 }}
+            transition={{ type: 'tween', duration: 0.75 }}
           >
             <motion.div
               style={{
