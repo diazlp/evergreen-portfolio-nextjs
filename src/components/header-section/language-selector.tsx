@@ -1,12 +1,17 @@
+import { availableLanguages } from '@/i18n/settings'
 import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Tabs, TabList, Tab, useColorModeValue } from '@chakra-ui/react'
+import { useTranslation } from 'react-i18next'
 
 export default function HeaderSection(): React.ReactNode {
+  const { i18n } = useTranslation()
   const [selectedTab, setSelectedTab] = useState(0)
 
   const onTabChangeHandler = (index: number) => {
     setSelectedTab(index)
+    const language = index === 0 ? 'en' : 'id'
+    i18n.changeLanguage(language)
   }
 
   return (
@@ -31,26 +36,19 @@ export default function HeaderSection(): React.ReactNode {
               }}
             />
           </motion.div>
-          <Tab
-            as={motion.button}
-            _selected={{
-              backgroundColor: 'transparent',
-              color: useColorModeValue('purple', 'orange'),
-              transition: { duration: 0.5 },
-            }}
-          >
-            EN
-          </Tab>
-          <Tab
-            as={motion.button}
-            _selected={{
-              backgroundColor: 'transparent',
-              color: useColorModeValue('purple', 'orange'),
-              transition: { duration: 0.5 },
-            }}
-          >
-            ID
-          </Tab>
+          {availableLanguages.map((lang) => (
+            <Tab
+              as={motion.button}
+              key={lang}
+              _selected={{
+                backgroundColor: 'transparent',
+                color: useColorModeValue('purple', 'orange'),
+                transition: { duration: 0.5 },
+              }}
+            >
+              {lang.toUpperCase()}
+            </Tab>
+          ))}
         </TabList>
       </AnimatePresence>
     </Tabs>

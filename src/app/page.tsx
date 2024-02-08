@@ -1,7 +1,8 @@
 'use client'
 
+import '@/i18n/settings'
 import React from 'react'
-import { Box, Heading } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import HeaderSection from '@/components/header-section'
 import HomeSection from '@/components/home-section'
 

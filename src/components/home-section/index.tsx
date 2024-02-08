@@ -14,8 +14,10 @@ import {
   Mark,
   useColorModeValue,
 } from '@chakra-ui/react'
+import { useTranslation } from 'react-i18next'
 import { ReactTyped } from 'react-typed'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { MdOutlineFileDownload } from 'react-icons/md'
 import { GITHUB_LINK, LINKEDIN_LINK } from '@/utils/constants'
 
 const variants: Variants = {
@@ -40,6 +42,8 @@ const variants: Variants = {
 }
 
 export default function HomeSection(): React.ReactNode {
+  const { t } = useTranslation()
+
   return (
     <Container
       as={motion.div}
@@ -66,7 +70,7 @@ export default function HomeSection(): React.ReactNode {
           align="start"
           w={{ base: '100%', md: '50%' }}
           py={{ base: 20, md: 0 }}
-          userSelect="none"
+          // userSelect="none"
         >
           <Heading as="h1">
             <ReactTyped
@@ -80,24 +84,15 @@ export default function HomeSection(): React.ReactNode {
           <Divider />
 
           <Text color="gray.500" align="justify">
-            {/* <Trans i18nKey='excerpt'>
-              <strong>Student</strong> by day, <strong>mad developer</strong> by
-              night. Passionate about computer science and{' '}
-              <strong>new technologies</strong>, currently{' '}
-              <ExternalLink href='https://nextjs.org/'>Next.js</ExternalLink> &{' '}
-              <ExternalLink href='https://chakra-ui.com/'>
-                Chakra UI
-              </ExternalLink>
-              , I develop in order to propose different{' '}
-              <strong>opensource</strong> contents.
-            </Trans> */}
-            <strong>Welcome to my digital realm!</strong> I am a &#8202;
+            <strong>{t('welcome to my digital realm')}</strong> {t('i am a')}{' '}
+            &#8202;
             <Mark color={useColorModeValue('black', 'white')} fontWeight="bold">
               Software Developer
             </Mark>
-            &#8202; dedicated to crafting refined solutions that sculpt seamless
-            user experiences, striving to pursue excellence in my work and
-            delivering exceptional result
+            &#8202;{' '}
+            {t(
+              'dedicated to crafting refined solutions that sculpt seamless user experiences, striving to pursue excellence in my work and delivering exceptional result',
+            )}
           </Text>
           <HStack
             spacing={4}
@@ -120,6 +115,15 @@ export default function HomeSection(): React.ReactNode {
                 leftIcon={<FaGithub />}
               >
                 Github
+              </Button>
+            </Link>
+            <Link href={GITHUB_LINK} isExternal>
+              <Button
+                colorScheme="brand"
+                variant="ghost"
+                leftIcon={<MdOutlineFileDownload />}
+              >
+                CV
               </Button>
             </Link>
           </HStack>
