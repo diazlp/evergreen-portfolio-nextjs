@@ -17,8 +17,8 @@ const resources = {
 export const availableLanguages = Object.keys(resources)
 
 i18n
-  .use(XHR)
-  .use(LanguageDetector)
+  // .use(XHR)
+  // .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,

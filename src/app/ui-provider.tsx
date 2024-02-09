@@ -8,7 +8,7 @@ import {
   ColorModeScript,
   theme as base,
 } from '@chakra-ui/react'
-import '@fontsource/roboto-mono/700.css'
+import '@fontsource/roboto-mono'
 
 const config: ThemeConfig = {
   initialColorMode: 'light',
@@ -19,7 +19,10 @@ const fonts = {
   heading: `Roboto Mono, ${base.fonts.heading}`,
 }
 
-const theme = extendTheme({ config, fonts })
+const theme = extendTheme({
+  config,
+  fonts,
+})
 
 export default function UIProvider({
   children,
