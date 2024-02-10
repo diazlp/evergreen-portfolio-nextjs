@@ -8,7 +8,7 @@ import HomeSection from '@/components/home-section'
 
 export default function Home(): React.ReactNode {
   return (
-    <Box>
+    <Box overflow="hidden">
       <HeaderSection />
       <HomeSection />
       {/* <Box p={4}>
