@@ -11,15 +11,6 @@ export default function Home(): React.ReactNode {
     <Box overflow="hidden">
       <HeaderSection />
       <HomeSection />
-      {/* <Box p={4}>
-        <Heading size="lg">Projects</Heading>
-        <Box mt={4}>Project 1</Box>
-        <Box mt={4}>Project 2</Box>
-        <Box mt={4}>Project 3</Box>
-      </Box>
-      <Box bg="gray.100" py={4} textAlign="center">
-        <Heading size="md">Footer</Heading>
-      </Box> */}
     </Box>
   )
 }

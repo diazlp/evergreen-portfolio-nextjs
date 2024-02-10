@@ -1,72 +1,123 @@
-import React from 'react'
-import { Heading, Divider, HStack, Flex } from '@chakra-ui/react'
-import { Variants, motion } from 'framer-motion'
+'use client'
+
+import React, { useState } from 'react'
+import {
+  Heading,
+  Divider,
+  HStack,
+  Flex,
+  useColorModeValue,
+} from '@chakra-ui/react'
+import { AnimatePresence, Variants, motion } from 'framer-motion'
+import { usePathname, useRouter } from 'next/navigation'
+
+const routes: {
+  path: string
+  text: string
+}[] = [
+  { path: '/', text: '01 HOME' },
+  { path: '/project', text: '02 PROJECT' },
+  { path: '/about', text: '03 ABOUT' },
+  { path: '/contact', text: '04 CONTACT' },
+]
 
 const flexVariants: Variants = {
-  hidden: { opacity: 0 },
-  show: {
+  initial: { opacity: 0 },
+  enter: {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 3.2,
+      delayChildren: 3,
+    },
+  },
+  exit: {
+    x: -100,
+    opacity: 0,
+    transition: {
+      staggerChildren: 1,
     },
   },
 }
 
-// const itemVariants: Variants = {
-//   hidden: { scale: 0, top: 100 },
-//   show: { scale: 1, top: 30 },
-// }
-
 const itemVariants: Variants = {
-  hidden: { x: '100%', opacity: 0 },
-  show: {
-    x: 0,
+  initial: { x: '100%', opacity: 0 },
+  enter: {
+    x: 100,
     opacity: 1,
     transition: {
       type: 'tween',
       duration: 0.5,
     },
   },
+  exit: {
+    x: -100,
+    opacity: 0,
+  },
 }
 
 export default function SideNavigation(): React.ReactNode {
+  const pathname = usePathname()
+  const router = useRouter()
+  const [routePath, setRoutePath] = useState<string>(pathname)
+
   return (
     <HStack
       justify="end"
       w={{ base: '100%', md: '50%' }}
       display={{ base: 'none', md: 'flex' }}
     >
-      <Flex
-        as={motion.div}
-        direction="column"
-        gap={12}
-        letterSpacing={12}
-        cursor="pointer"
-        userSelect="none"
-        // initial={{ opacity: 0, y: -20 }}
-        // animate={{ opacity: 1, y: 0 }}
-        initial="hidden"
-        animate="show"
-        variants={flexVariants}
-        // transition={{ duration: 0.5, delayChildren: 0.2, staggerChildren: 0.2 }}
-      >
-        <motion.div variants={itemVariants}>
-          <Heading fontWeight="normal">01 HOME</Heading>
-          <Divider />
-        </motion.div>
-        <motion.div variants={itemVariants}>
-          <Heading fontWeight="normal">02 PROJECT</Heading>
-          <Divider />
-        </motion.div>
-        <motion.div variants={itemVariants}>
-          <Heading fontWeight="normal">03 ABOUT</Heading>
-          <Divider />
-        </motion.div>
-        <motion.div variants={itemVariants}>
-          <Heading fontWeight="normal">04 CONTACT</Heading>
-        </motion.div>
-      </Flex>
+      <AnimatePresence mode="wait" initial>
+        <Flex
+          as={motion.div}
+          direction="column"
+          gap={12}
+          letterSpacing={12}
+          cursor="pointer"
+          userSelect="none"
+          initial="initial"
+          animate="enter"
+          exit="exit"
+          variants={flexVariants}
+          key={routePath}
+        >
+          {routes.map((route, index) => (
+            <motion.div
+              key={index}
+              whileHover={{
+                x: 20,
+                transition: {
+                  type: 'tween',
+                },
+              }}
+              whileTap={{
+                opacity: 0,
+                x: -100,
+                transition: {
+                  type: 'tween',
+                },
+              }}
+              variants={itemVariants}
+              onClick={() => {
+                setRoutePath(route.path)
+                router.push(route.path)
+              }}
+            >
+              <Heading
+                fontWeight="normal"
+                color={
+                  pathname === route.path
+                    ? useColorModeValue('purple', 'orange')
+                    : ''
+                }
+              >
+                {route.text}
+              </Heading>
+              {index !== routes.length - 1 && <Divider />}
+              {/* <Divider /> */}
+            </motion.div>
+          ))}
+        </Flex>
+      </AnimatePresence>
     </HStack>
   )
 }
