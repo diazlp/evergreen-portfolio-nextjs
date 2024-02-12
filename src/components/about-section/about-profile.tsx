@@ -20,11 +20,7 @@ export default function AboutProfile(): React.ReactNode {
         letterSpacing={1}
         fontWeight={useColorModeValue('medium', 'initial')}
       >
-        Hello 👋 My name is Diaz and I'm passionate about crafting things other
-        people can resonate with. My journey into programming began during my
-        college days when I was introduced to Python for Data Science as part of
-        the curriculum. Soon after, I taught myself web development and fell in
-        love at first sight.
+        {t('hello')}! 👋 {t('profile-1')}
       </Text>
 
       <Text
@@ -32,11 +28,7 @@ export default function AboutProfile(): React.ReactNode {
         letterSpacing={1}
         fontWeight={useColorModeValue('medium', 'initial')}
       >
-        I've always been drawn to writing, and as a Software Developer, I've
-        found an unique way to express myself. Knowing that others will interact
-        with my work, I strive to ensure it's of the highest quality. I
-        prioritize writing maintainable and scalable code, ensuring a smooth
-        experience for both users and fellow developers.
+        {t('profile-2')}
       </Text>
 
       <Text
@@ -44,9 +36,7 @@ export default function AboutProfile(): React.ReactNode {
         letterSpacing={1}
         fontWeight={useColorModeValue('medium', 'initial')}
       >
-        While I've had exposure to quite a few technologies, each one has
-        provided me with a broader perspective. Here are some of the
-        technologies I'm proficient in:
+        {t('profile-3')}
       </Text>
 
       <List

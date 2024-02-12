@@ -5,5 +5,10 @@
   "home": "BERANDA",
   "project": "PROJEK",
   "about": "TENTANG",
-  "contact": "KONTAK"
+  "contact": "KONTAK",
+
+  "hello": "Halo",
+  "profile-1": "Perkenalkan nama saya Diaz, passion saya dalam hidup adalah menciptakan hal-hal yang dapat bermanfaat bagi orang lain. Perjalanan saya dalam dunia pemrograman dimulai pada masa kuliah, disana saya mempelajari Python untuk Data Science sebagai salah satu mata kuliah. Kemudian saya otodidak mempelajari web development dan langsung menyukainya.",
+  "profile-2": "Semasa hidup, saya selalu tertarik untuk menjadi seorang penulis, dan sebagai seorang Software Developer, saya menemukan cara unik untuk mengekspresikan diri. Dengan mengetahui bahwa orang lain akan membaca tulisan saya, saya selalu berusaha untuk memastikan kualitas tulisan yang terbaik. Dalam hal ini, saya memprioritaskan untuk menulis kode yang maintainable dan scalable, guna memastikan pengalaman terbaik bagi pengguna maupun pengembang aplikasi lainnya.",
+  "profile-3": "Saya cukup familiar dengan beberapa teknologi, dimana masing-masing teknologi tersebut selalu memberikan perspektif baru. Akan tetapi, berikut adalah beberapa teknologi yang paling saya kuasai:"
 }

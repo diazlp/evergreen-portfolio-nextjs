@@ -5,5 +5,10 @@
   "home": "HOME",
   "project": "PROJECT",
   "about": "ABOUT",
-  "contact": "CONTACT"
+  "contact": "CONTACT",
+
+  "hello": "Hello",
+  "profile-1": "My name is Diaz and I'm passionate about crafting things other people can resonate with. My journey into programming began during my college days when I was introduced to Python for Data Science as part of the curriculum. Soon after, I taught myself web development and fell in love at first sight.",
+  "profile-2": "I've always been drawn to writing, and as a Software Developer, I've found an unique way to express myself. Knowing that others will interact with my work, I strive to ensure it's of the highest quality. I prioritize writing maintainable and scalable code, ensuring a smooth experience for both users and fellow developers.",
+  "profile-3": "While I've had exposure to quite a few technologies, each one has provided me with a broader perspective. Here are some of the technologies I'm proficient in:"
 }
