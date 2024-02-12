@@ -1,3 +1,5 @@
+'use client'
+
 import { availableLanguages } from '@/i18n/settings'
 import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -21,7 +23,7 @@ export default function HeaderSection(): React.ReactNode {
       onChange={onTabChangeHandler}
     >
       <AnimatePresence mode="wait">
-        <TabList key={selectedTab}>
+        <TabList key={selectedTab} defaultValue={'id'}>
           <motion.div
             style={{ position: 'absolute', bottom: 0, width: '50%', zIndex: 1 }}
             initial={{ x: selectedTab === 0 ? '100%' : '0%' }}
@@ -39,6 +41,7 @@ export default function HeaderSection(): React.ReactNode {
           {availableLanguages.map((lang) => (
             <Tab
               as={motion.button}
+              value={lang}
               key={lang}
               _selected={{
                 backgroundColor: 'transparent',
