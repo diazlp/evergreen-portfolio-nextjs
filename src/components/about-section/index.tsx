@@ -1,8 +1,9 @@
 import React from 'react'
 import { Variants, motion } from 'framer-motion'
-import { Container, Stack, VStack } from '@chakra-ui/react'
+import { Container, Stack, VStack, Spacer } from '@chakra-ui/react'
 import AboutProfile from './about-profile'
 import BasicProfile from './basic-profile'
+import SocialProfile from './social-profile'
 
 const variants: Variants = {
   hidden: {
@@ -55,10 +56,13 @@ export default function AboutSection(): React.ReactNode {
             position="sticky"
             top={'15vh'}
             w={{ base: '100%', md: '40%' }}
+            minH="73vh"
             py={{ base: 20, md: 0 }}
             userSelect="none"
           >
             <BasicProfile />
+            <Spacer />
+            <SocialProfile />
           </VStack>
 
           <VStack

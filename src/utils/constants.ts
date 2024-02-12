@@ -4,3 +4,11 @@ export const LINKEDIN_LINK: string =
 export const CV_LINK_INTERNAL = './diazlinggaputra-cv.pdf'
 export const CV_LINK_EXTERNAL =
   'https://drive.google.com/file/d/1afLDtNIgeLNsIBmm1yYsmCqeJkggOl7w/view?usp=sharing'
+
+export const INSTAGRAM_LINK = 'https://www.instagram.com/diazlp'
+export const EMAIL_LINK = 'mailto:diazlinggaputra@gmail.com'
+export const QUORA_LINK = 'https://www.quora.com/profile/Diaz-Linggaputra'
+export const STACKOVERFLOW_LINK =
+  'https://stackoverflow.com/users/17562602/diazlp'
+export const MEDIUM_LINK = 'https://medium.com/@diazlinggaputra_95770'
+export const WHATSAPP_LINK = 'https://wa.me/6281283071034'
