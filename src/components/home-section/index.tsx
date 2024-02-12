@@ -1,9 +1,8 @@
 import React from 'react'
 import { Variants, motion } from 'framer-motion'
 import { Container, Stack, HStack } from '@chakra-ui/react'
-import { useTranslation } from 'react-i18next'
 import CoreInformationComponent from './core-info'
-import SideNavigation from '../side-navigation'
+import HomeNavigation from './home-navigation'
 
 const variants: Variants = {
   hidden: {
@@ -27,8 +26,6 @@ const variants: Variants = {
 }
 
 export default function HomeSection(): React.ReactNode {
-  const { t } = useTranslation()
-
   return (
     <Container
       as={motion.div}
@@ -58,7 +55,7 @@ export default function HomeSection(): React.ReactNode {
           w={{ base: '100%', md: '50%' }}
           display={{ base: 'none', md: 'flex' }}
         >
-          <SideNavigation />
+          <HomeNavigation />
         </HStack>
       </Stack>
     </Container>

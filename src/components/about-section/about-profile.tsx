@@ -19,24 +19,27 @@ export default function AboutProfile(): React.ReactNode {
         color={useColorModeValue('black', 'gray.300')}
         letterSpacing={1}
         fontWeight={useColorModeValue('medium', 'initial')}
+        userSelect="none"
       >
-        {t('hello')}! 👋 {t('profile-1')}
+        {t('about-profile-0')}! 👋 {t('about-profile-1')}
       </Text>
 
       <Text
         color={useColorModeValue('black', 'gray.300')}
         letterSpacing={1}
         fontWeight={useColorModeValue('medium', 'initial')}
+        userSelect="none"
       >
-        {t('profile-2')}
+        {t('about-profile-2')}
       </Text>
 
       <Text
         color={useColorModeValue('black', 'gray.300')}
         letterSpacing={1}
         fontWeight={useColorModeValue('medium', 'initial')}
+        userSelect="none"
       >
-        {t('profile-3')}
+        {t('about-profile-3')}
       </Text>
 
       <List

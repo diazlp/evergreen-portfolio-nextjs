@@ -6,7 +6,7 @@ import AboutSection from '@/components/about-section'
 
 export default function About(): React.ReactNode {
   return (
-    <Box overflow="hidden">
+    <Box>
       <AboutSection />
     </Box>
   )

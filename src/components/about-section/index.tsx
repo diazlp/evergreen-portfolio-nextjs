@@ -1,17 +1,8 @@
 import React from 'react'
 import { Variants, motion } from 'framer-motion'
-import {
-  Container,
-  Stack,
-  VStack,
-  Heading,
-  Divider,
-  Text,
-  Mark,
-  useColorModeValue,
-} from '@chakra-ui/react'
-import CustomNavigation from '../custom-navigation'
+import { Container, Stack, VStack } from '@chakra-ui/react'
 import AboutProfile from './about-profile'
+import BasicProfile from './basic-profile'
 
 const variants: Variants = {
   hidden: {
@@ -41,10 +32,8 @@ export default function AboutSection(): React.ReactNode {
         as={motion.div}
         display="flex"
         maxW="full"
-        // maxH={{ base: 'auto', md: '100vh' }}
         maxH="full"
         px={{ base: 0, md: 20 }}
-        marginTop={{ base: 0, md: 8 }}
         initial="hidden"
         animate="enter"
         exit="exit"
@@ -52,57 +41,28 @@ export default function AboutSection(): React.ReactNode {
         centerContent
       >
         <Stack
+          position="relative"
           spacing={4}
           py={'20'}
-          align="center"
+          top={{ base: 0, md: 19 }}
           justify="center"
           alignItems="flex-start"
-          h="100vh"
-          w="100%"
           direction={{ base: 'column', md: 'row' }}
         >
           <VStack
             spacing={2}
             align="start"
+            position="sticky"
+            top={'15vh'}
             w={{ base: '100%', md: '40%' }}
             py={{ base: 20, md: 0 }}
             userSelect="none"
           >
-            <Heading size="2xl">
-              Diaz Linggaputra
-              <Divider />
-            </Heading>
-
-            <Text
-              color={useColorModeValue('black', 'white')}
-              align="justify"
-              fontSize="xl"
-              fontWeight="medium"
-            >
-              Full-stack Developer at Tomei Consolidated Bhd
-            </Text>
-
-            <Text color="gray.500" align="justify">
-              <Mark
-                color={useColorModeValue('black', 'white')}
-                fontWeight="bold"
-              >
-                Software Developer
-              </Mark>{' '}
-              at mind,{' '}
-              <Mark
-                color={useColorModeValue('black', 'white')}
-                fontWeight="bold"
-              >
-                Entrepreneur
-              </Mark>{' '}
-              at heart. <br />I approach every work with long-term vision and
-              adaptibility.
-            </Text>
-
-            <CustomNavigation />
+            <BasicProfile />
           </VStack>
+
           <VStack
+            position="relative"
             justify="start"
             align="start"
             px={{ base: 'auto', md: 10 }}
@@ -111,19 +71,6 @@ export default function AboutSection(): React.ReactNode {
             gap={5}
           >
             <AboutProfile />
-            {/* <Flex
-              as={motion.div}
-              direction="column"
-              gap={12}
-              letterSpacing={12}
-              cursor="pointer"
-              userSelect="none"
-              initial="initial"
-              animate="enter"
-              exit="exit"
-            >
-              uhui
-            </Flex> */}
           </VStack>
         </Stack>
       </Container>

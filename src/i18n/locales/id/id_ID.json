@@ -7,8 +7,14 @@
   "about": "TENTANG",
   "contact": "KONTAK",
 
-  "hello": "Halo",
-  "profile-1": "Perkenalkan nama saya Diaz, passion saya dalam hidup adalah menciptakan hal-hal yang dapat bermanfaat bagi orang lain. Perjalanan saya dalam dunia pemrograman dimulai pada masa kuliah, disana saya mempelajari Python untuk Data Science sebagai salah satu mata kuliah. Kemudian saya otodidak mempelajari web development dan langsung menyukainya.",
-  "profile-2": "Semasa hidup, saya selalu tertarik untuk menjadi seorang penulis, dan sebagai seorang Software Developer, saya menemukan cara unik untuk mengekspresikan diri. Dengan mengetahui bahwa orang lain akan membaca tulisan saya, saya selalu berusaha untuk memastikan kualitas tulisan yang terbaik. Dalam hal ini, saya memprioritaskan untuk menulis kode yang maintainable dan scalable, guna memastikan pengalaman terbaik bagi pengguna maupun pengembang aplikasi lainnya.",
-  "profile-3": "Saya cukup familiar dengan beberapa teknologi, dimana masing-masing teknologi tersebut selalu memberikan perspektif baru. Akan tetapi, berikut adalah beberapa teknologi yang paling saya kuasai:"
+  "basic-profile-0": "di",
+  "basic-profile-1": "Pendekatan saya dalam setiap projek adalah visi jangka panjang dan beradaptasi",
+
+  "tooltip-profile-1": "Pengalaman saya sebagai full-stack developer membuat saya dapat beradaptasi dengan basis kode menjadi lebih efisien",
+  "tooltip-profile-2": "Hal ini dikarenakan bahwa saya bukan hanya dapat menuliskan kode yang scalable, tetapi juga dapat membayangkan bagaimana sistemnya bekerja dari awal hingga akhir dan bagaimana mengintegrasikan semua komponennya",
+
+  "about-profile-0": "Halo",
+  "about-profile-1": "Perkenalkan nama saya Diaz, passion saya dalam hidup adalah menciptakan hal-hal yang dapat bermanfaat bagi orang lain. Perjalanan saya dalam dunia pemrograman dimulai pada masa kuliah, disana saya mempelajari Python untuk Data Science sebagai salah satu mata kuliah. Kemudian saya otodidak mempelajari web development dan langsung menyukainya.",
+  "about-profile-2": "Semasa hidup, saya selalu tertarik untuk menjadi seorang penulis, dan sebagai seorang Software Developer, saya menemukan cara unik untuk mengekspresikan diri. Dengan mengetahui bahwa orang lain akan membaca tulisan saya, saya selalu berusaha untuk memastikan kualitas tulisan yang terbaik. Dalam hal ini, saya memprioritaskan untuk menulis kode yang maintainable dan scalable, guna memastikan pengalaman terbaik bagi pengguna maupun pengembang aplikasi lainnya.",
+  "about-profile-3": "Saya cukup familiar dengan beberapa teknologi, dimana masing-masing teknologi tersebut selalu memberikan perspektif baru. Berikut adalah beberapa teknologi yang paling saya kuasai:"
 }

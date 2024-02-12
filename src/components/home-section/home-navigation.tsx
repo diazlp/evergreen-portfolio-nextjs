@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Heading, Flex, useColorModeValue } from '@chakra-ui/react'
+import { Heading, Divider, Flex, useColorModeValue } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { AnimatePresence, Variants, motion } from 'framer-motion'
 import { usePathname, useRouter } from 'next/navigation'
@@ -12,11 +12,11 @@ const flexVariants: Variants = {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
-      // delayChildren: 3,
+      delayChildren: 3,
     },
   },
   exit: {
-    x: 100,
+    x: -100,
     opacity: 0,
     transition: {
       staggerChildren: 1,
@@ -25,9 +25,9 @@ const flexVariants: Variants = {
 }
 
 const itemVariants: Variants = {
-  initial: { x: '-100%', opacity: 0 },
+  initial: { x: '100%', opacity: 0 },
   enter: {
-    x: 0,
+    x: 100,
     opacity: 1,
     transition: {
       type: 'tween',
@@ -35,12 +35,12 @@ const itemVariants: Variants = {
     },
   },
   exit: {
-    x: 100,
+    x: -100,
     opacity: 0,
   },
 }
 
-export default function CustomNavigation(): React.ReactNode {
+export default function HomeNavigation(): React.ReactNode {
   const { t } = useTranslation()
 
   const pathname = usePathname()
@@ -62,9 +62,8 @@ export default function CustomNavigation(): React.ReactNode {
       <Flex
         as={motion.div}
         direction="column"
-        marginTop={5}
-        gap={3}
-        // letterSpacing={12}
+        gap={12}
+        letterSpacing={12}
         cursor="pointer"
         userSelect="none"
         initial="initial"
@@ -77,7 +76,7 @@ export default function CustomNavigation(): React.ReactNode {
           <motion.div
             key={index}
             whileHover={{
-              x: 40,
+              x: 20,
               transition: {
                 type: 'tween',
               },
@@ -97,7 +96,6 @@ export default function CustomNavigation(): React.ReactNode {
           >
             <Heading
               fontWeight="normal"
-              fontSize="large"
               color={
                 pathname === route.path
                   ? useColorModeValue('purple', 'orange')
@@ -106,6 +104,8 @@ export default function CustomNavigation(): React.ReactNode {
             >
               {route.text}
             </Heading>
+            {index !== routes.length - 1 && <Divider />}
+            {/* <Divider /> */}
           </motion.div>
         ))}
       </Flex>

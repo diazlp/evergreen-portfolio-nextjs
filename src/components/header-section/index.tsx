@@ -9,7 +9,8 @@ export default function HeaderSection(): React.ReactNode {
       as="header"
       position="fixed"
       top="0"
-      p={8}
+      px={8}
+      py={6}
       zIndex="tooltip"
       justify="space-between"
       align="center"
