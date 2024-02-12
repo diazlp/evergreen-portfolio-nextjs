@@ -6,13 +6,12 @@ import {
   VStack,
   Heading,
   Divider,
-  HStack,
-  Flex,
   Text,
   Mark,
   useColorModeValue,
 } from '@chakra-ui/react'
 import CustomNavigation from '../custom-navigation'
+import AboutProfile from './about-profile'
 
 const variants: Variants = {
   hidden: {
@@ -101,27 +100,18 @@ export default function AboutSection(): React.ReactNode {
               adaptibility.
             </Text>
 
-            {/* <VStack
-              spacing={2}
-              align="start"
-              w={{ base: '100%', md: '40%' }}
-              py={{ base: 20, md: 0 }}
-              userSelect="none"
-            >
-              <Text>ok</Text>
-              <Text>ok</Text>
-              <Text>ok</Text>
-              <Text>ok</Text>
-            </VStack> */}
             <CustomNavigation />
           </VStack>
-          <HStack
-            // justify="end"
+          <VStack
+            justify="start"
+            align="start"
+            px={{ base: 'auto', md: 10 }}
             w={{ base: '100%', md: '50%' }}
             display={{ base: 'none', md: 'flex' }}
-            className="border border-red-700"
+            gap={5}
           >
-            <Flex
+            <AboutProfile />
+            {/* <Flex
               as={motion.div}
               direction="column"
               gap={12}
@@ -133,8 +123,8 @@ export default function AboutSection(): React.ReactNode {
               exit="exit"
             >
               uhui
-            </Flex>
-          </HStack>
+            </Flex> */}
+          </VStack>
         </Stack>
       </Container>
     </>

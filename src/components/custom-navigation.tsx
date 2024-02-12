@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Heading, Divider, Flex, useColorModeValue } from '@chakra-ui/react'
+import { Heading, Flex, useColorModeValue } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { AnimatePresence, Variants, motion } from 'framer-motion'
 import { usePathname, useRouter } from 'next/navigation'
