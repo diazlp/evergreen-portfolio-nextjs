@@ -1,6 +1,6 @@
 import React from 'react'
 import { Variants, motion } from 'framer-motion'
-import { Container, Stack } from '@chakra-ui/react'
+import { Container, Stack, HStack } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import CoreInformationComponent from './core-info'
 import SideNavigation from '../side-navigation'
@@ -52,7 +52,14 @@ export default function HomeSection(): React.ReactNode {
         direction={{ base: 'column', md: 'row' }}
       >
         <CoreInformationComponent />
-        <SideNavigation />
+
+        <HStack
+          justify="end"
+          w={{ base: '100%', md: '50%' }}
+          display={{ base: 'none', md: 'flex' }}
+        >
+          <SideNavigation />
+        </HStack>
       </Stack>
     </Container>
   )

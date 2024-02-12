@@ -1,5 +1,5 @@
 import React from 'react'
-import { HStack, Heading, Flex } from '@chakra-ui/react'
+import { HStack, Flex } from '@chakra-ui/react'
 import ThemeButtonComponent from './theme-button'
 import LanguageSelectorComponent from './language-selector'
 
@@ -21,7 +21,6 @@ export default function HeaderSection(): React.ReactNode {
 
       <Flex as="div" align="center" justify="space-between" gap={5}>
         <LanguageSelectorComponent />
-        {/* <Heading size="md">Test</Heading> */}
       </Flex>
     </HStack>
   )

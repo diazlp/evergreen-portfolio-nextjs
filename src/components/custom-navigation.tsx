@@ -16,7 +16,7 @@ const flexVariants: Variants = {
     },
   },
   exit: {
-    x: -100,
+    x: 100,
     opacity: 0,
     transition: {
       staggerChildren: 1,
@@ -25,9 +25,9 @@ const flexVariants: Variants = {
 }
 
 const itemVariants: Variants = {
-  initial: { x: '100%', opacity: 0 },
+  initial: { x: '-100%', opacity: 0 },
   enter: {
-    x: 100,
+    x: 0,
     opacity: 1,
     transition: {
       type: 'tween',
@@ -35,12 +35,12 @@ const itemVariants: Variants = {
     },
   },
   exit: {
-    x: -100,
+    x: 100,
     opacity: 0,
   },
 }
 
-export default function SideNavigation(): React.ReactNode {
+export default function CustomNavigation(): React.ReactNode {
   const { t } = useTranslation()
 
   const pathname = usePathname()
@@ -62,8 +62,9 @@ export default function SideNavigation(): React.ReactNode {
       <Flex
         as={motion.div}
         direction="column"
-        gap={12}
-        letterSpacing={12}
+        marginTop={5}
+        gap={3}
+        // letterSpacing={12}
         cursor="pointer"
         userSelect="none"
         initial="initial"
@@ -76,7 +77,7 @@ export default function SideNavigation(): React.ReactNode {
           <motion.div
             key={index}
             whileHover={{
-              x: 20,
+              x: 40,
               transition: {
                 type: 'tween',
               },
@@ -96,6 +97,7 @@ export default function SideNavigation(): React.ReactNode {
           >
             <Heading
               fontWeight="normal"
+              fontSize="large"
               color={
                 pathname === route.path
                   ? useColorModeValue('purple', 'orange')
@@ -104,8 +106,6 @@ export default function SideNavigation(): React.ReactNode {
             >
               {route.text}
             </Heading>
-            {index !== routes.length - 1 && <Divider />}
-            {/* <Divider /> */}
           </motion.div>
         ))}
       </Flex>

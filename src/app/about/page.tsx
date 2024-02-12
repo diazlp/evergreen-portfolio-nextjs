@@ -1,11 +1,15 @@
+'use client'
+
 import React from 'react'
 import { Box } from '@chakra-ui/react'
-import SideNavigation from '@/components/side-navigation'
+import HeaderSection from '@/components/header-section'
+import AboutSection from '@/components/about-section'
 
-export default function Project(): React.ReactNode {
+export default function About(): React.ReactNode {
   return (
     <Box overflow="hidden">
-      <SideNavigation />
+      <HeaderSection />
+      <AboutSection />
     </Box>
   )
 }
