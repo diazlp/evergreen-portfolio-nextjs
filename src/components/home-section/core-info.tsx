@@ -55,12 +55,24 @@ export default function CoreInformationComponent(): React.ReactNode {
         w="full"
         justify={{ base: 'center', md: 'flex-start' }}
       >
-        <Link href={LINKEDIN_LINK} isExternal>
+        <Link
+          href={LINKEDIN_LINK}
+          isExternal
+          _hover={{
+            color: useColorModeValue('green', 'brand.100'),
+          }}
+        >
           <Button colorScheme="brand" variant="ghost" leftIcon={<FaLinkedin />}>
             LinkedIn
           </Button>
         </Link>
-        <Link href={GITHUB_LINK} isExternal>
+        <Link
+          href={GITHUB_LINK}
+          isExternal
+          _hover={{
+            color: useColorModeValue('green', 'brand.100'),
+          }}
+        >
           <Button colorScheme="brand" variant="ghost" leftIcon={<FaGithub />}>
             Github
           </Button>
@@ -72,13 +84,16 @@ export default function CoreInformationComponent(): React.ReactNode {
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => window.open(CV_LINK_INTERNAL, '_blank')}
+          _hover={{
+            color: useColorModeValue('green', 'brand.100'),
+          }}
         >
           <Button
             colorScheme="brand"
             variant="ghost"
             leftIcon={<MdOutlineFileDownload />}
           >
-            CV
+            Resume
           </Button>
         </Link>
       </HStack>
