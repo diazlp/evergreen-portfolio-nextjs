@@ -44,15 +44,11 @@ export default function CoreInformationComponent(): React.ReactNode {
       <Divider />
 
       <Text color="gray.500" align="justify">
-        <strong>{t('welcome to my digital realm')}</strong> {t('i am a')}{' '}
-        &#8202;
+        <strong>{t('core-info-1')}</strong> {t('core-info-2')}&#8202;
         <Mark color={useColorModeValue('black', 'white')} fontWeight="bold">
           Software Developer
         </Mark>
-        &#8202;{' '}
-        {t(
-          'dedicated to crafting refined solutions that sculpt seamless user experiences, striving to pursue excellence in my work and delivering exceptional result',
-        )}
+        &#8202; {t('core-info-3')}
       </Text>
       <HStack
         spacing={4}

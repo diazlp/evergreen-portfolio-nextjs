@@ -51,10 +51,10 @@ export default function SideNavigation(): React.ReactNode {
     path: string
     text: string
   }[] = [
-    { path: '/', text: `01 ${t('home')}` },
-    { path: '/project', text: `02 ${t('project')}` },
-    { path: '/about', text: `03 ${t('about')}` },
-    { path: '/contact', text: `04 ${t('contact')}` },
+    { path: '/', text: `01 ${t('nav-home')}` },
+    { path: '/project', text: `02 ${t('nav-project')}` },
+    { path: '/about', text: `03 ${t('nav-about')}` },
+    { path: '/contact', text: `04 ${t('nav-contact')}` },
   ]
 
   return (
