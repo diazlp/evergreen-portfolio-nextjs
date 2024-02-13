@@ -2,7 +2,8 @@ import React from 'react'
 import { Variants, motion } from 'framer-motion'
 import { Container, Stack, HStack } from '@chakra-ui/react'
 import CoreInformationComponent from './core-info'
-import HomeNavigation from './home-navigation'
+import PhotoThumb from './photo-thumb'
+import StartButton from './start-button'
 
 const variants: Variants = {
   hidden: {
@@ -31,7 +32,7 @@ export default function HomeSection(): React.ReactNode {
       as={motion.div}
       display="flex"
       maxW="container.lg"
-      minH={{ base: 'auto', md: '100vh' }}
+      maxH={{ base: 'auto', md: '100vh' }}
       px={{ base: 4, lg: 8 }}
       initial="hidden"
       animate="enter"
@@ -55,9 +56,11 @@ export default function HomeSection(): React.ReactNode {
           w={{ base: '100%', md: '50%' }}
           display={{ base: 'none', md: 'flex' }}
         >
-          <HomeNavigation />
+          <PhotoThumb />
+          {/* <HomeNavigation /> */}
         </HStack>
       </Stack>
+      <StartButton />
     </Container>
   )
 }
