@@ -10,6 +10,7 @@ import {
 import { useTranslation } from 'react-i18next'
 import { GoTriangleRight } from 'react-icons/go'
 import ExperienceProfile from './experience-profile'
+import EducationProfile from './education-profile'
 
 export default function AboutProfile(): React.ReactNode {
   const { t } = useTranslation()
@@ -88,6 +89,10 @@ export default function AboutProfile(): React.ReactNode {
 
       <VStack w="full" marginTop={20} gap={10}>
         <ExperienceProfile />
+      </VStack>
+
+      <VStack w="full" marginTop={20} gap={10}>
+        <EducationProfile />
       </VStack>
     </Fragment>
   )

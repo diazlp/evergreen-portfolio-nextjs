@@ -27,5 +27,9 @@
   "about-profile-4": "Pada waktu luang, saya biasanya menghabiskan waktu untuk menonton film, bermain game, memasak; dan kadang kala saya olahraga dan/atau melatih permainan golf saya.",
 
   "experience-profile-1": "Bekerja sama dengan tim lain guna mengembangkan dan mendeploy aplikasi; baik aplikasi antar-muka untuk internal maupun untuk customer, yang sudah digunakan oleh banyak outlet dan customer di seluruh Malaysia. Mengimplementasikan WebSocket dan WebRTC sebagai protokol untuk kemampuan berkomunikasi. Tanggung jawab saya sehari-hari adalah mengimplementasikan fitur-fitur baru, melakukan maintenance dan optimasi performance; juga melakukan deployment ke Azure Web Service.",
-  "experience-profile-2": "Turut berkontribusi sebagai Asisten Trainer dalam kursus Python Data Science. Bertanggung jawab memfasilitasi sesi konseling untuk membantu peserta untuk memaksimalkan pembelajaran mereka; juga memonitor dan menilai progress kemajuan peserta selama masa pembelajaran."
+  "experience-profile-2": "Turut berkontribusi sebagai Asisten Trainer dalam kursus Python Data Science. Bertanggung jawab memfasilitasi sesi konseling untuk membantu peserta untuk memaksimalkan pembelajaran mereka; juga memonitor dan menilai progress kemajuan peserta selama masa pembelajaran.",
+
+  "education-profile-itb": "Institut Teknologi Bandung",
+  "education-profile-1": "Meskipun saya sudah belajar mandiri selama hampir setahun, saya merasa perlu untuk memperkuat skill dan pengetahuan saya; yang menjadi alasan dasar saya mengikuti bootcamp Hacktiv8. Lulus sebagai salah satu siswa terbaik di batch saya, saya menyadari bahwa kerja keras tidak pernah menghianati hasil.",
+  "education-profile-2": "Semasa kuliah, saya mendalami Data Science dan Web Development. Namun, pada akhirnya, saya menemukan bahwa dunia kreatif yang ditawarkan dalam Web Development lebih dekat dengan passion saya. Seiring berjalan waktu, saya semakin menyukai Web Development meskipun saya sempat berpengalaman mengajarkan Data Science."
 }

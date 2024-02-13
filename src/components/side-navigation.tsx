@@ -54,7 +54,7 @@ export default function SideNavigation(): React.ReactNode {
     { path: '/', text: `01 ${t('custom-nav-home')}` },
     { path: '/project', text: `02 ${t('custom-nav-project')}` },
     { path: '/about', text: `03 ${t('custom-nav-about')}` },
-    { path: '/contact', text: `04 ${t('custom-nav-contact')}` },
+    // { path: '/contact', text: `04 ${t('custom-nav-contact')}` },
   ]
 
   return (
