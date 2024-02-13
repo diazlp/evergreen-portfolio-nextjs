@@ -1,5 +1,5 @@
 import React from 'react'
-import { HStack, Link } from '@chakra-ui/react'
+import { HStack, Link, useColorModeValue } from '@chakra-ui/react'
 import {
   FaGithub,
   FaLinkedin,
@@ -24,28 +24,84 @@ import {
 export default function SocialProfile(): React.ReactNode {
   return (
     <HStack gap={5} fontSize={{ base: 'initial', md: 'large', xl: 'x-large' }}>
-      <Link href={GITHUB_LINK} isExternal>
+      <Link
+        href={GITHUB_LINK}
+        isExternal
+        _hover={{
+          transform: 'scale(1.2)',
+          color: useColorModeValue('green', 'brand.100'),
+        }}
+      >
         <FaGithub />
       </Link>
-      <Link href={LINKEDIN_LINK} isExternal>
+      <Link
+        href={LINKEDIN_LINK}
+        isExternal
+        _hover={{
+          transform: 'scale(1.2)',
+          color: useColorModeValue('green', 'brand.100'),
+        }}
+      >
         <FaLinkedin />
       </Link>
-      <Link href={INSTAGRAM_LINK} isExternal>
+      <Link
+        href={INSTAGRAM_LINK}
+        isExternal
+        _hover={{
+          transform: 'scale(1.2)',
+          color: useColorModeValue('green', 'brand.100'),
+        }}
+      >
         <FaInstagram />
       </Link>
-      <Link href={EMAIL_LINK} isExternal>
+      <Link
+        href={EMAIL_LINK}
+        isExternal
+        _hover={{
+          transform: 'scale(1.2)',
+          color: useColorModeValue('green', 'brand.100'),
+        }}
+      >
         <MdEmail />
       </Link>
-      <Link href={QUORA_LINK} isExternal>
+      <Link
+        href={QUORA_LINK}
+        isExternal
+        _hover={{
+          transform: 'scale(1.2)',
+          color: useColorModeValue('green', 'brand.100'),
+        }}
+      >
         <FaQuora />
       </Link>
-      <Link href={STACKOVERFLOW_LINK} isExternal>
+      <Link
+        href={STACKOVERFLOW_LINK}
+        isExternal
+        _hover={{
+          transform: 'scale(1.2)',
+          color: useColorModeValue('green', 'brand.100'),
+        }}
+      >
         <FaStackOverflow />
       </Link>
-      <Link href={MEDIUM_LINK} isExternal>
+      <Link
+        href={MEDIUM_LINK}
+        isExternal
+        _hover={{
+          transform: 'scale(1.2)',
+          color: useColorModeValue('green', 'brand.100'),
+        }}
+      >
         <FaMedium />
       </Link>
-      <Link href={WHATSAPP_LINK} isExternal>
+      <Link
+        href={WHATSAPP_LINK}
+        isExternal
+        _hover={{
+          transform: 'scale(1.2)',
+          color: useColorModeValue('green', 'brand.100'),
+        }}
+      >
         <FaWhatsapp />
       </Link>
     </HStack>

@@ -21,6 +21,7 @@ export default function HeaderSection(): React.ReactNode {
       colorScheme={useColorModeValue('purple', 'orange')}
       size="md"
       onChange={onTabChangeHandler}
+      userSelect="none"
     >
       <AnimatePresence mode="wait">
         <TabList key={selectedTab} defaultValue={'id'}>

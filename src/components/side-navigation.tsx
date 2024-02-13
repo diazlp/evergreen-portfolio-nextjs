@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Heading, Flex, useColorModeValue } from '@chakra-ui/react'
+import { Heading, Flex, Mark, useColorModeValue } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { AnimatePresence, Variants, motion } from 'framer-motion'
 import { usePathname, useRouter } from 'next/navigation'
@@ -51,10 +51,10 @@ export default function SideNavigation(): React.ReactNode {
     path: string
     text: string
   }[] = [
-    { path: '/', text: `01 ${t('nav-home')}` },
-    { path: '/project', text: `02 ${t('nav-project')}` },
-    { path: '/about', text: `03 ${t('nav-about')}` },
-    { path: '/contact', text: `04 ${t('nav-contact')}` },
+    { path: '/', text: `01 ${t('custom-nav-home')}` },
+    { path: '/project', text: `02 ${t('custom-nav-project')}` },
+    { path: '/about', text: `03 ${t('custom-nav-about')}` },
+    { path: '/contact', text: `04 ${t('custom-nav-contact')}` },
   ]
 
   return (
@@ -62,9 +62,9 @@ export default function SideNavigation(): React.ReactNode {
       <Flex
         as={motion.div}
         direction="column"
-        marginTop={5}
+        marginTop={10}
         gap={3}
-        // letterSpacing={12}
+        letterSpacing={1}
         cursor="pointer"
         userSelect="none"
         initial="initial"
@@ -77,14 +77,14 @@ export default function SideNavigation(): React.ReactNode {
           <motion.div
             key={index}
             whileHover={{
-              x: 40,
+              x: pathname !== route.path ? 15 : 0,
               transition: {
                 type: 'tween',
               },
             }}
             whileTap={{
-              opacity: 0,
-              x: -100,
+              opacity: pathname !== route.path ? 0 : 1,
+              x: pathname !== route.path ? 50 : 0,
               transition: {
                 type: 'tween',
               },
@@ -97,12 +97,18 @@ export default function SideNavigation(): React.ReactNode {
           >
             <Heading
               fontWeight="normal"
-              fontSize="large"
+              fontSize="medium"
               color={
                 pathname === route.path
                   ? useColorModeValue('purple', 'orange')
-                  : ''
+                  : 'initial'
               }
+              _hover={{
+                color:
+                  pathname !== route.path
+                    ? useColorModeValue('green', 'brand.100')
+                    : '',
+              }}
             >
               {route.text}
             </Heading>

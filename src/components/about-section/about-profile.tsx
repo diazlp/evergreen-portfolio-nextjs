@@ -49,33 +49,52 @@ export default function AboutProfile(): React.ReactNode {
         display="flex"
         minW={{ base: '100%' }}
         gap={10}
+        userSelect="none"
       >
         <VStack align="left">
           <ListItem>
-            <ListIcon as={GoTriangleRight} color="green.500" />
+            <ListIcon
+              as={GoTriangleRight}
+              color={useColorModeValue('green', 'brand.100')}
+            />
             JavaScript (ES6+)
           </ListItem>
           <ListItem>
-            <ListIcon as={GoTriangleRight} color="green.500" />
+            <ListIcon
+              as={GoTriangleRight}
+              color={useColorModeValue('green', 'brand.100')}
+            />
             Next.js
           </ListItem>
           <ListItem>
-            <ListIcon as={GoTriangleRight} color="green.500" />
+            <ListIcon
+              as={GoTriangleRight}
+              color={useColorModeValue('green', 'brand.100')}
+            />
             React
           </ListItem>
         </VStack>
 
         <VStack align="left">
           <ListItem>
-            <ListIcon as={GoTriangleRight} color="green.500" />
+            <ListIcon
+              as={GoTriangleRight}
+              color={useColorModeValue('green', 'brand.100')}
+            />
             TypeScript
           </ListItem>
           <ListItem>
-            <ListIcon as={GoTriangleRight} color="green.500" />
+            <ListIcon
+              as={GoTriangleRight}
+              color={useColorModeValue('green', 'brand.100')}
+            />
             Node.js
           </ListItem>
           <ListItem>
-            <ListIcon as={GoTriangleRight} color="green.500" />
+            <ListIcon
+              as={GoTriangleRight}
+              color={useColorModeValue('green', 'brand.100')}
+            />
             NestJS
           </ListItem>
         </VStack>

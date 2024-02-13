@@ -15,11 +15,18 @@ const config: ThemeConfig = {
   useSystemColorMode: false,
 }
 
+const colors = {
+  brand: {
+    100: '#64fed9',
+  },
+}
+
 const fonts = {
   heading: `Roboto Mono, ${base.fonts.heading}`,
 }
 
 const theme = extendTheme({
+  colors,
   config,
   fonts,
 })

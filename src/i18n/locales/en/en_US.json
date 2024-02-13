@@ -4,6 +4,11 @@
   "nav-about": "ABOUT",
   "nav-contact": "CONTACT",
 
+  "custom-nav-home": "Home",
+  "custom-nav-project": "Project",
+  "custom-nav-about": "About",
+  "custom-nav-contact": "Contact",
+
   "core-info-1": "Welcome to my digital realm!",
   "core-info-2": "I am a ",
   "core-info-3": "dedicated to crafting refined solutions that sculpt seamless user experiences, striving to pursue excellence in my work and delivering exceptional result",

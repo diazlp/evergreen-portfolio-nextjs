@@ -4,12 +4,17 @@
   "nav-about": "TENTANG",
   "nav-contact": "KONTAK",
 
+  "custom-nav-home": "Beranda",
+  "custom-nav-project": "Projek",
+  "custom-nav-about": "Tentang",
+  "custom-nav-contact": "Kontak",
+
   "core-info-1": "Selamat datang di dunia digital saya!",
   "core-info-2": "Saya adalah seorang ",
   "core-info-3": "yang berdedikasi untuk merancang solusi terbaik demi menciptakan pengalaman pengguna yang mulus, yang berusaha mengejar keunggulan dalam setiap proyek dan memberikan hasil yang terbaik",
 
   "basic-profile-0": "di",
-  "basic-profile-1": "Pendekatan saya dalam setiap projek adalah visi jangka panjang dan beradaptasi.",
+  "basic-profile-1": "Pendekatan saya dalam setiap projek adalah visi jangka panjang dan selalu beradaptasi.",
 
   "tooltip-profile-1": "Pengalaman saya sebagai full-stack developer membuat saya dapat beradaptasi dengan basis kode menjadi lebih efisien",
   "tooltip-profile-2": "Hal ini dikarenakan bahwa saya bukan hanya dapat menuliskan kode yang scalable, tetapi juga dapat membayangkan bagaimana sistemnya bekerja dari awal hingga akhir dan bagaimana mengintegrasikan semua komponennya",
