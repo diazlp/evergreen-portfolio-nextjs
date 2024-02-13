@@ -7,8 +7,11 @@ import {
   useColorModeValue,
   Tag,
 } from '@chakra-ui/react'
+import { useTranslation } from 'react-i18next'
 
 export default function ExperienceProfile(): React.ReactNode {
+  const { t } = useTranslation()
+
   return (
     <Fragment>
       {/* Tomei Consolidated Bhd */}
@@ -31,14 +34,7 @@ export default function ExperienceProfile(): React.ReactNode {
             Tomei Consolidated Bhd
           </Heading>
           <Text color={useColorModeValue('black', 'gray.500')}>
-            Collaborate closely with cross-functional teams to develop and
-            deploy both internal and customer-facing interfaces used by numerous
-            of store outlets and customers across Malaysia. Spearhead the
-            implementation of Websocket and WebRTC protocols to enable direct
-            communication capabilities. Day-to-day responsibilities include
-            implementing new features, addressing maintenance tasks such as bug
-            fixes and performance optimizations, and deploying updates to Azure
-            Web Service PaaS infrastructure.
+            {t('experience-profile-1')}
           </Text>
           <HStack gap={2} flexWrap="wrap">
             {[
@@ -85,11 +81,7 @@ export default function ExperienceProfile(): React.ReactNode {
             Sanbercode
           </Heading>
           <Text color={useColorModeValue('black', 'gray.500')}>
-            Contributed to the delivery of Python Data Science courses by
-            working closely with the lead trainer. Responsible to facilitate
-            group counseling sessions to support students in reaching their
-            academic goals and monitored their progress throughout the duration
-            of the course.
+            {t('experience-profile-2')}
           </Text>
           <HStack gap={2} flexWrap="wrap">
             {['Python', 'Pandas', 'Matplotlib', 'NLP'].map((item, index) => (

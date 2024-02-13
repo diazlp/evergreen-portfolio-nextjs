@@ -77,6 +77,15 @@ export default function AboutProfile(): React.ReactNode {
         </VStack>
       </List>
 
+      <Text
+        color={useColorModeValue('black', 'gray.300')}
+        letterSpacing={1}
+        fontWeight={useColorModeValue('medium', 'initial')}
+        userSelect="none"
+      >
+        {t('about-profile-4')} ⛳
+      </Text>
+
       <VStack w="full" marginTop={20} gap={10}>
         <ExperienceProfile />
       </VStack>

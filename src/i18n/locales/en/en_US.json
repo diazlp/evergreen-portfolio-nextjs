@@ -23,5 +23,9 @@
   "about-profile-0": "Hello",
   "about-profile-1": "My name is Diaz and I'm passionate about crafting things other people can resonate with. My journey into programming began during my college days when I was introduced to Python for Data Science as part of the curriculum. Soon after, I taught myself web development and fell in love at first sight.",
   "about-profile-2": "I've always been drawn to writing, and as a Software Developer, I've found an unique way to express myself. Knowing that others will interact with my work, I strive to ensure it's of the highest quality. I prioritize writing maintainable and scalable code, ensuring a smooth experience for both users and fellow developers.",
-  "about-profile-3": "While I've had exposure to quite a few technologies, each one has provided me with a broader perspective. Here are some of the technologies I'm proficient in:"
+  "about-profile-3": "While I've had exposure to quite a few technologies, each one has provided me with a broader perspective. Here are some of the technologies I'm proficient in:",
+  "about-profile-4": "When I'm away from the keyboard, I spend my time watching movies, playing some games, cooking; and in every other day, I hit the gym or go to the driving range to practice my golf swings.",
+
+  "experience-profile-1": "Collaborate closely with cross-functional teams to develop and deploy both internal and customer-facing interfaces used by numerous of store outlets and customers across Malaysia. Spearhead the implementation of Websocket and WebRTC protocols to enable direct communication capabilities. Day-to-day responsibilities include implementing new features, addressing maintenance tasks such as bug fixes and performance optimizations, and deploying updates to Azure Web Service PaaS infrastructure.",
+  "experience-profile-2": "Contributed to the delivery of Python Data Science courses by working closely with the lead trainer. Responsible to facilitate group counseling sessions to support students in reaching their academic goals and monitored their progress throughout the duration of the course."
 }
