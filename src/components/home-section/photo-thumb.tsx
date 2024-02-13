@@ -41,6 +41,8 @@ export default function PhotoThumb(): React.ReactNode {
           height={500}
           alt="Diaz Linggaputra Photo"
           className="select-none"
+          style={{ width: '100%', height: 'auto' }}
+          priority={true}
         />
       </motion.div>
     </AnimatePresence>
