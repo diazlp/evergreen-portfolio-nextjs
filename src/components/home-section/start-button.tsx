@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { AnimatePresence, Variants, motion } from 'framer-motion'
 import { HStack, Heading, Box, useColorModeValue } from '@chakra-ui/react'
+import { useTranslation } from 'react-i18next'
 import { useRouter } from 'next/navigation'
 import { BiSolidRightArrow } from 'react-icons/bi'
 
@@ -50,6 +51,8 @@ const arrowVariants: Variants = {
 }
 
 export default function StartButton(): React.ReactNode {
+  const { t } = useTranslation()
+
   const router = useRouter()
   const [routePath, setRoutePath] = useState<string>('')
 
@@ -74,7 +77,7 @@ export default function StartButton(): React.ReactNode {
         }}
       >
         <Heading fontSize="large" fontWeight="normal">
-          Continue
+          {t('nav-start')}
         </Heading>
         <Box
           as={motion.div}

@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { GoTriangleRight } from 'react-icons/go'
+import ExperienceProfile from './experience-profile'
 
 export default function AboutProfile(): React.ReactNode {
   const { t } = useTranslation()
@@ -52,53 +53,33 @@ export default function AboutProfile(): React.ReactNode {
         userSelect="none"
       >
         <VStack align="left">
-          <ListItem>
-            <ListIcon
-              as={GoTriangleRight}
-              color={useColorModeValue('green', 'brand.100')}
-            />
-            JavaScript (ES6+)
-          </ListItem>
-          <ListItem>
-            <ListIcon
-              as={GoTriangleRight}
-              color={useColorModeValue('green', 'brand.100')}
-            />
-            Next.js
-          </ListItem>
-          <ListItem>
-            <ListIcon
-              as={GoTriangleRight}
-              color={useColorModeValue('green', 'brand.100')}
-            />
-            React
-          </ListItem>
+          {['JavaScript (ES6+)', 'Next.js', 'React'].map((item, index) => (
+            <ListItem key={index}>
+              <ListIcon
+                as={GoTriangleRight}
+                color={useColorModeValue('green', 'brand.100')}
+              />
+              {item}
+            </ListItem>
+          ))}
         </VStack>
 
         <VStack align="left">
-          <ListItem>
-            <ListIcon
-              as={GoTriangleRight}
-              color={useColorModeValue('green', 'brand.100')}
-            />
-            TypeScript
-          </ListItem>
-          <ListItem>
-            <ListIcon
-              as={GoTriangleRight}
-              color={useColorModeValue('green', 'brand.100')}
-            />
-            Node.js
-          </ListItem>
-          <ListItem>
-            <ListIcon
-              as={GoTriangleRight}
-              color={useColorModeValue('green', 'brand.100')}
-            />
-            NestJS
-          </ListItem>
+          {['TypeScript', 'Node.js', 'NestJS'].map((item, index) => (
+            <ListItem key={index}>
+              <ListIcon
+                as={GoTriangleRight}
+                color={useColorModeValue('green', 'brand.100')}
+              />
+              {item}
+            </ListItem>
+          ))}
         </VStack>
       </List>
+
+      <VStack w="full" marginTop={20} gap={10}>
+        <ExperienceProfile />
+      </VStack>
     </Fragment>
   )
 }

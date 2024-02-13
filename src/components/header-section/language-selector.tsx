@@ -18,7 +18,7 @@ export default function HeaderSection(): React.ReactNode {
 
   return (
     <Tabs
-      colorScheme={useColorModeValue('purple', 'orange')}
+      colorScheme={useColorModeValue('purple', 'teal')}
       size="md"
       onChange={onTabChangeHandler}
       userSelect="none"
@@ -33,7 +33,7 @@ export default function HeaderSection(): React.ReactNode {
           >
             <motion.div
               style={{
-                backgroundColor: useColorModeValue('purple', 'orange'),
+                backgroundColor: useColorModeValue('purple', '#64fed9'),
                 height: '2px',
                 width: '100%',
               }}
@@ -46,7 +46,7 @@ export default function HeaderSection(): React.ReactNode {
               key={lang}
               _selected={{
                 backgroundColor: 'transparent',
-                color: useColorModeValue('purple', 'orange'),
+                color: useColorModeValue('purple', 'brand.100'),
                 transition: { duration: 0.5 },
               }}
             >
