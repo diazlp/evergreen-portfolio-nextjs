@@ -72,8 +72,8 @@ export default function StartButton(): React.ReactNode {
         exit="exit"
         variants={buttonVariants}
         onClick={() => {
-          setRoutePath('/about')
-          router.push('/about')
+          setRoutePath('/project')
+          router.push('/project')
         }}
       >
         <Heading fontSize={{ base: 'medium', md: 'large' }} fontWeight="normal">

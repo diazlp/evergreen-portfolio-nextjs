@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { FaQuestionCircle } from 'react-icons/fa'
-import SideNavigation from '../side-navigation'
+import SideNavigation from './side-navigation'
 import TooltipProfile from './tooltip-profile'
 
 export default function BasicProfile(): React.ReactNode {

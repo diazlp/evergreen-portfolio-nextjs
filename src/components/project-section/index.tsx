@@ -1,9 +1,9 @@
 import React from 'react'
 import { Variants, motion } from 'framer-motion'
-import { Container, Stack, VStack, Spacer } from '@chakra-ui/react'
+import { Container, Stack, VStack, Spacer, Text } from '@chakra-ui/react'
 import BasicProfile from '../basic-profile'
-import AboutProfile from './about-profile'
-import SocialProfile from './social-profile'
+import AboutProfile from '../about-section/about-profile'
+import SkillProfile from './skill-profile'
 
 const variants: Variants = {
   hidden: {
@@ -26,7 +26,7 @@ const variants: Variants = {
   },
 }
 
-export default function AboutSection(): React.ReactNode {
+export default function ProjectSection(): React.ReactNode {
   return (
     <Container
       as={motion.div}
@@ -62,7 +62,7 @@ export default function AboutSection(): React.ReactNode {
         >
           <BasicProfile />
           <Spacer />
-          <SocialProfile />
+          <SkillProfile />
         </VStack>
 
         <VStack

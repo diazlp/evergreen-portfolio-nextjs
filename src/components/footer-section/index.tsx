@@ -29,11 +29,7 @@ export default function FooterSection({
           backgroundColor: useColorModeValue('black', 'white'),
         }}
       >
-        <Text sx={{ writingMode: 'vertical-lr', textOrientation: 'mixed' }}>
-          <Text as="span" color={useColorModeValue('green', 'brand.100')}>
-            {children}
-          </Text>
-        </Text>
+        {children}
       </VStack>
     </Box>
   )
