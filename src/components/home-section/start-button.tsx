@@ -76,7 +76,7 @@ export default function StartButton(): React.ReactNode {
           router.push('/about')
         }}
       >
-        <Heading fontSize="large" fontWeight="normal">
+        <Heading fontSize={{ base: 'medium', md: 'large' }} fontWeight="normal">
           {t('nav-start')}
         </Heading>
         <Box

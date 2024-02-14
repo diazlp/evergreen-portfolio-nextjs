@@ -10,7 +10,7 @@ export default function FooterSection({
     <Box
       as="footer"
       position="fixed"
-      display={{ base: 'none', md: 'inline' }}
+      display={{ base: 'none', xl: 'inline' }}
       bottom={0}
       left={10}
       userSelect="none"

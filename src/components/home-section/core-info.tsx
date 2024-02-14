@@ -1,10 +1,11 @@
 import React from 'react'
 import {
   VStack,
+  HStack,
+  Box,
   Heading,
   Divider,
   Text,
-  HStack,
   Link,
   Button,
   Mark,
@@ -20,6 +21,7 @@ import {
   CV_LINK_INTERNAL,
   CV_LINK_EXTERNAL,
 } from '@/utils/constants'
+import Image from 'next/image'
 
 export default function CoreInformationComponent(): React.ReactNode {
   const { t } = useTranslation()
@@ -32,15 +34,28 @@ export default function CoreInformationComponent(): React.ReactNode {
       py={{ base: 20, md: 0 }}
       userSelect="none"
     >
-      <Heading as="h1">
-        <ReactTyped
-          startWhenVisible
-          strings={['Diaz Linggaputra']}
-          typeSpeed={70}
-          startDelay={1000}
-          cursorChar="_"
-        />
-      </Heading>
+      <HStack gap={5}>
+        <Box as="div" display={{ base: 'flex', md: 'none' }}>
+          <Image
+            src="/assets/images/diazlp-photo.png"
+            width={60}
+            height={100}
+            alt="Diaz Linggaputra Photo"
+            className="select-none"
+            style={{ width: 'auto', height: 'auto' }}
+            loading="lazy"
+          />
+        </Box>
+        <Heading as="h1">
+          <ReactTyped
+            startWhenVisible
+            strings={['Diaz Linggaputra']}
+            typeSpeed={70}
+            startDelay={1000}
+            cursorChar="_"
+          />
+        </Heading>
+      </HStack>
       <Divider />
 
       <Text color="gray.500" align="justify">

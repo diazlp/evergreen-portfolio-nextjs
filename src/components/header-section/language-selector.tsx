@@ -19,7 +19,7 @@ export default function HeaderSection(): React.ReactNode {
   return (
     <Tabs
       colorScheme={useColorModeValue('purple', 'teal')}
-      size="md"
+      size={{ base: 'sm', md: 'md' }}
       onChange={onTabChangeHandler}
       userSelect="none"
     >
