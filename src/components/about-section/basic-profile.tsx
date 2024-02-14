@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import {
   Heading,
   Divider,
@@ -15,6 +15,8 @@ import TooltipProfile from './tooltip-profile'
 
 export default function BasicProfile(): React.ReactNode {
   const { t } = useTranslation()
+
+  const [isTooltipOpen, setIsTooltipOpen] = useState<boolean>(false)
 
   return (
     <Fragment>
@@ -42,8 +44,12 @@ export default function BasicProfile(): React.ReactNode {
         </Mark>
         &#8202; at heart. <br />
         {t('basic-profile-1')}
-        <Tooltip label={<TooltipProfile />}>
-          <Tag bgColor="transparent" cursor="pointer">
+        <Tooltip label={<TooltipProfile />} isOpen={isTooltipOpen}>
+          <Tag
+            bgColor="transparent"
+            cursor="pointer"
+            onClick={() => setIsTooltipOpen(!isTooltipOpen)}
+          >
             <FaQuestionCircle />
           </Tag>
         </Tooltip>

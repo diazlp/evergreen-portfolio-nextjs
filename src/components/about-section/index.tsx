@@ -33,7 +33,7 @@ export default function AboutSection(): React.ReactNode {
       display="flex"
       maxW="full"
       maxH="full"
-      px={{ base: 0, md: 20 }}
+      px={{ base: 10, md: 20 }}
       initial="hidden"
       animate="enter"
       exit="exit"
@@ -47,12 +47,13 @@ export default function AboutSection(): React.ReactNode {
         top={{ base: 0, md: 19 }}
         justify="center"
         alignItems="flex-start"
+        fontSize={{ base: 'small', md: 'initial' }}
         direction={{ base: 'column', md: 'row' }}
       >
         <VStack
           spacing={2}
           align="start"
-          position="sticky"
+          position={{ base: 'initial', md: 'sticky' }}
           top={'15vh'}
           w={{ base: '100%', md: '40%' }}
           minH="73vh"
@@ -70,7 +71,6 @@ export default function AboutSection(): React.ReactNode {
           align="start"
           px={{ base: 'auto', md: 10 }}
           w={{ base: '100%', md: '50%' }}
-          display={{ base: 'none', md: 'flex' }}
           gap={5}
         >
           <AboutProfile />

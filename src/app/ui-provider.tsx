@@ -5,7 +5,7 @@ import {
   ChakraProvider,
   extendTheme,
   type ThemeConfig,
-  ColorModeScript,
+  // ColorModeScript,
   theme as base,
 } from '@chakra-ui/react'
 import '@fontsource/roboto-mono'
@@ -38,7 +38,7 @@ export default function UIProvider({
 }) {
   return (
     <ChakraProvider theme={theme}>
-      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+      {/* <ColorModeScript initialColorMode={theme.config.initialColorMode} /> */}
       {children}
     </ChakraProvider>
   )
