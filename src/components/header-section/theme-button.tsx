@@ -30,18 +30,22 @@ const variants: Variants = {
 export default function ThemeButtonComponent(): React.ReactNode {
   const { toggleColorMode } = useColorMode()
 
+  const themeButtonKey = useColorModeValue('light', 'dark')
+  const themeButtonSchemeColor = useColorModeValue('purple', 'orange')
+  const themeButtonIcon = useColorModeValue(<SunIcon />, <MoonIcon />)
+
   return (
     <AnimatePresence mode="wait" initial>
       <IconButton
         as={motion.button}
         aria-label="Theme button mode"
         size="md"
-        key={useColorModeValue('light', 'dark')}
+        key={themeButtonKey}
         initial="initial"
         animate="enter"
         exit="exit"
-        colorScheme={useColorModeValue('purple', 'orange')}
-        icon={useColorModeValue(<SunIcon />, <MoonIcon />)}
+        colorScheme={themeButtonSchemeColor}
+        icon={themeButtonIcon}
         variants={variants}
         onClick={toggleColorMode}
       />

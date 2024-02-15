@@ -8,6 +8,9 @@ export default function HeaderSection(): React.ReactNode {
   const { i18n } = useTranslation()
   const [selectedTab, setSelectedTab] = useState(0)
 
+  const tabSchemeColor = useColorModeValue('purple', 'brand.100')
+  const tabSwitchMotionColor = useColorModeValue('purple', '#64fed9')
+
   const onTabChangeHandler = (index: number) => {
     setSelectedTab(index)
     const language = index === 0 ? 'en' : 'id'
@@ -16,7 +19,7 @@ export default function HeaderSection(): React.ReactNode {
 
   return (
     <Tabs
-      colorScheme={useColorModeValue('purple', 'teal')}
+      colorScheme={tabSchemeColor}
       size={{ base: 'sm', md: 'md' }}
       onChange={onTabChangeHandler}
       userSelect="none"
@@ -31,7 +34,7 @@ export default function HeaderSection(): React.ReactNode {
           >
             <motion.div
               style={{
-                backgroundColor: useColorModeValue('purple', '#64fed9'),
+                backgroundColor: tabSwitchMotionColor,
                 height: '2px',
                 width: '100%',
               }}
@@ -44,7 +47,7 @@ export default function HeaderSection(): React.ReactNode {
               key={lang}
               _selected={{
                 backgroundColor: 'transparent',
-                color: useColorModeValue('purple', 'brand.100'),
+                color: tabSchemeColor,
                 transition: { duration: 0.5 },
               }}
             >

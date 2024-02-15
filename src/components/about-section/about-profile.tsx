@@ -14,40 +14,42 @@ import EducationProfile from './education-profile'
 
 export default function AboutProfile(): React.ReactNode {
   const { t } = useTranslation()
+  const textAboutColor = useColorModeValue('black', 'gray.300')
+  const textAboutWeight = useColorModeValue('medium', 'initial')
 
   return (
     <Fragment>
       <Text
-        color={useColorModeValue('black', 'gray.300')}
+        color={textAboutColor}
         letterSpacing={1}
-        fontWeight={useColorModeValue('medium', 'initial')}
+        fontWeight={textAboutWeight}
         userSelect="none"
       >
         {t('about-profile-0')}! 👋 {t('about-profile-1')}
       </Text>
 
       <Text
-        color={useColorModeValue('black', 'gray.300')}
+        color={textAboutColor}
         letterSpacing={1}
-        fontWeight={useColorModeValue('medium', 'initial')}
+        fontWeight={textAboutWeight}
         userSelect="none"
       >
         {t('about-profile-2')}
       </Text>
 
       <Text
-        color={useColorModeValue('black', 'gray.300')}
+        color={textAboutColor}
         letterSpacing={1}
-        fontWeight={useColorModeValue('medium', 'initial')}
+        fontWeight={textAboutWeight}
         userSelect="none"
       >
         {t('about-profile-3')}
       </Text>
 
       <List
-        color={useColorModeValue('black', 'gray.300')}
+        color={textAboutColor}
         letterSpacing={1}
-        fontWeight={useColorModeValue('medium', 'initial')}
+        fontWeight={textAboutWeight}
         display="flex"
         minW={{ base: '100%' }}
         gap={10}
@@ -58,7 +60,12 @@ export default function AboutProfile(): React.ReactNode {
             <ListItem key={index}>
               <ListIcon
                 as={GoTriangleRight}
-                color={useColorModeValue('green', 'brand.100')}
+                _light={{
+                  color: 'green',
+                }}
+                _dark={{
+                  color: 'brand.100',
+                }}
               />
               {item}
             </ListItem>
@@ -70,7 +77,12 @@ export default function AboutProfile(): React.ReactNode {
             <ListItem key={index}>
               <ListIcon
                 as={GoTriangleRight}
-                color={useColorModeValue('green', 'brand.100')}
+                _light={{
+                  color: 'green',
+                }}
+                _dark={{
+                  color: 'brand.100',
+                }}
               />
               {item}
             </ListItem>
@@ -79,9 +91,9 @@ export default function AboutProfile(): React.ReactNode {
       </List>
 
       <Text
-        color={useColorModeValue('black', 'gray.300')}
+        color={textAboutColor}
         letterSpacing={1}
-        fontWeight={useColorModeValue('medium', 'initial')}
+        fontWeight={textAboutWeight}
         userSelect="none"
       >
         {t('about-profile-4')} ⛳

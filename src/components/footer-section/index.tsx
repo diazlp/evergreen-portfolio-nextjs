@@ -6,6 +6,8 @@ export default function FooterSection({
 }: {
   children: React.ReactNode
 }): React.ReactNode {
+  const footerLineColor = useColorModeValue('black', 'white')
+
   return (
     <Box
       as="footer"
@@ -26,7 +28,7 @@ export default function FooterSection({
           width: '1px',
           height: '90px',
           margin: '0 auto',
-          backgroundColor: useColorModeValue('black', 'white'),
+          backgroundColor: footerLineColor,
         }}
       >
         {children}

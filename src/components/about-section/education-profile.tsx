@@ -12,6 +12,8 @@ import { FaGraduationCap } from 'react-icons/fa'
 export default function EducationProfile(): React.ReactNode {
   const { t } = useTranslation()
 
+  const educationTextColor = useColorModeValue('black', 'gray.500')
+
   return (
     <Fragment>
       {/* Hacktiv8 */}
@@ -24,7 +26,7 @@ export default function EducationProfile(): React.ReactNode {
       >
         <HStack alignSelf="flex-start" align="center" w="30%">
           <FaGraduationCap />
-          <Text color={useColorModeValue('black', 'gray.500')}>MAY 2022</Text>
+          <Text color={educationTextColor}>MAY 2022</Text>
         </HStack>
 
         <VStack flex="1" align="start">
@@ -32,9 +34,7 @@ export default function EducationProfile(): React.ReactNode {
           <Heading fontSize="medium" fontWeight="medium">
             Certificate in FullStack Javascript Immersive
           </Heading>
-          <Text color={useColorModeValue('black', 'gray.500')}>
-            {t('education-profile-1')}
-          </Text>
+          <Text color={educationTextColor}>{t('education-profile-1')}</Text>
         </VStack>
       </HStack>
 
@@ -48,7 +48,7 @@ export default function EducationProfile(): React.ReactNode {
       >
         <HStack alignSelf="flex-start" align="center" w="30%">
           <FaGraduationCap />
-          <Text color={useColorModeValue('black', 'gray.500')}>DEC 2021</Text>
+          <Text color={educationTextColor}>DEC 2021</Text>
         </HStack>
 
         <VStack flex="1" align="start">
@@ -56,9 +56,7 @@ export default function EducationProfile(): React.ReactNode {
           <Heading fontSize="medium" fontWeight="medium">
             Bachelor of Science in Astronomy
           </Heading>
-          <Text color={useColorModeValue('black', 'gray.500')}>
-            {t('education-profile-2')}
-          </Text>
+          <Text color={educationTextColor}>{t('education-profile-2')}</Text>
         </VStack>
       </HStack>
     </Fragment>

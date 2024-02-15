@@ -18,6 +18,7 @@ import TooltipProfile from './tooltip-profile'
 export default function BasicProfile(): React.ReactNode {
   const { t } = useTranslation()
 
+  const profileTextColor = useColorModeValue('black', 'white')
   const [isTooltipOpen, setIsTooltipOpen] = useState<boolean>(false)
 
   return (
@@ -28,7 +29,7 @@ export default function BasicProfile(): React.ReactNode {
       </Heading>
 
       <Text
-        color={useColorModeValue('black', 'white')}
+        color={profileTextColor}
         align="justify"
         fontSize="xl"
         fontWeight="medium"
@@ -37,11 +38,11 @@ export default function BasicProfile(): React.ReactNode {
       </Text>
 
       <Text color="gray.500" align="justify" flexWrap="wrap">
-        <Mark color={useColorModeValue('black', 'white')} fontWeight="bold">
+        <Mark color={profileTextColor} fontWeight="bold">
           Software Developer
         </Mark>
         &#8202; at mind, &#8202;
-        <Mark color={useColorModeValue('black', 'white')} fontWeight="bold">
+        <Mark color={profileTextColor} fontWeight="bold">
           Entrepreneur
         </Mark>
         &#8202; at heart. <br />

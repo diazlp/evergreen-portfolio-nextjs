@@ -26,6 +26,8 @@ import Image from 'next/image'
 export default function CoreInformationComponent(): React.ReactNode {
   const { t } = useTranslation()
 
+  const homeSocialColor = useColorModeValue('green', 'brand.100')
+
   return (
     <VStack
       spacing={2}
@@ -60,7 +62,15 @@ export default function CoreInformationComponent(): React.ReactNode {
 
       <Text color="gray.500" align="justify">
         <strong>{t('core-info-1')}</strong> {t('core-info-2')}&#8202;
-        <Mark color={useColorModeValue('black', 'white')} fontWeight="bold">
+        <Mark
+          fontWeight="bold"
+          _light={{
+            color: 'black',
+          }}
+          _dark={{
+            color: 'white',
+          }}
+        >
           Software Developer
         </Mark>
         &#8202; {t('core-info-3')}
@@ -74,7 +84,7 @@ export default function CoreInformationComponent(): React.ReactNode {
           href={LINKEDIN_LINK}
           isExternal
           _hover={{
-            color: useColorModeValue('green', 'brand.100'),
+            color: homeSocialColor,
           }}
         >
           <Button colorScheme="brand" variant="ghost" leftIcon={<FaLinkedin />}>
@@ -85,7 +95,7 @@ export default function CoreInformationComponent(): React.ReactNode {
           href={GITHUB_LINK}
           isExternal
           _hover={{
-            color: useColorModeValue('green', 'brand.100'),
+            color: homeSocialColor,
           }}
         >
           <Button colorScheme="brand" variant="ghost" leftIcon={<FaGithub />}>
@@ -100,7 +110,7 @@ export default function CoreInformationComponent(): React.ReactNode {
           rel="noopener noreferrer"
           onClick={() => window.open(CV_LINK_INTERNAL, '_blank')}
           _hover={{
-            color: useColorModeValue('green', 'brand.100'),
+            color: homeSocialColor,
           }}
         >
           <Button

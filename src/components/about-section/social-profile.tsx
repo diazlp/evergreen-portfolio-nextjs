@@ -22,6 +22,8 @@ import {
 } from '@/utils/constants'
 
 export default function SocialProfile(): React.ReactNode {
+  const socialLinkColor = useColorModeValue('green', 'brand.100')
+
   return (
     <HStack gap={5} fontSize={{ base: 'initial', md: 'large', xl: 'x-large' }}>
       <Link
@@ -29,7 +31,7 @@ export default function SocialProfile(): React.ReactNode {
         isExternal
         _hover={{
           transform: 'scale(1.2)',
-          color: useColorModeValue('green', 'brand.100'),
+          color: socialLinkColor,
         }}
       >
         <FaGithub />
@@ -39,7 +41,7 @@ export default function SocialProfile(): React.ReactNode {
         isExternal
         _hover={{
           transform: 'scale(1.2)',
-          color: useColorModeValue('green', 'brand.100'),
+          color: socialLinkColor,
         }}
       >
         <FaLinkedin />
@@ -49,7 +51,7 @@ export default function SocialProfile(): React.ReactNode {
         isExternal
         _hover={{
           transform: 'scale(1.2)',
-          color: useColorModeValue('green', 'brand.100'),
+          color: socialLinkColor,
         }}
       >
         <FaInstagram />
@@ -59,7 +61,7 @@ export default function SocialProfile(): React.ReactNode {
         isExternal
         _hover={{
           transform: 'scale(1.2)',
-          color: useColorModeValue('green', 'brand.100'),
+          color: socialLinkColor,
         }}
       >
         <MdEmail />
@@ -69,7 +71,7 @@ export default function SocialProfile(): React.ReactNode {
         isExternal
         _hover={{
           transform: 'scale(1.2)',
-          color: useColorModeValue('green', 'brand.100'),
+          color: socialLinkColor,
         }}
       >
         <FaQuora />
@@ -79,7 +81,7 @@ export default function SocialProfile(): React.ReactNode {
         isExternal
         _hover={{
           transform: 'scale(1.2)',
-          color: useColorModeValue('green', 'brand.100'),
+          color: socialLinkColor,
         }}
       >
         <FaStackOverflow />
@@ -89,7 +91,7 @@ export default function SocialProfile(): React.ReactNode {
         isExternal
         _hover={{
           transform: 'scale(1.2)',
-          color: useColorModeValue('green', 'brand.100'),
+          color: socialLinkColor,
         }}
       >
         <FaMedium />
@@ -99,7 +101,7 @@ export default function SocialProfile(): React.ReactNode {
         isExternal
         _hover={{
           transform: 'scale(1.2)',
-          color: useColorModeValue('green', 'brand.100'),
+          color: socialLinkColor,
         }}
       >
         <FaWhatsapp />

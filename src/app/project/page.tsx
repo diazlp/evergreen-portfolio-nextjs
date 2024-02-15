@@ -10,6 +10,7 @@ import useProject from '@/hooks/useProject'
 
 export default function Project(): React.ReactNode {
   const { isLoading, projects } = useProject()
+  const linkColor = useColorModeValue('green', 'brand.100')
 
   return (
     <Box>
@@ -19,14 +20,14 @@ export default function Project(): React.ReactNode {
           gap={5}
           fontSize={{ base: 'initial', md: 'large', xl: 'x-large' }}
           transform="rotate(180deg)"
-          color={useColorModeValue('green', 'brand.100')}
+          color={linkColor}
         >
           <Link
             href={WHATSAPP_LINK}
             isExternal
             _hover={{
               transform: 'scale(1.2)',
-              color: useColorModeValue('green', 'brand.100'),
+              color: linkColor,
             }}
           >
             <FaWhatsapp />
@@ -36,7 +37,7 @@ export default function Project(): React.ReactNode {
             isExternal
             _hover={{
               transform: 'scale(1.2)',
-              color: useColorModeValue('green', 'brand.100'),
+              color: linkColor,
             }}
           >
             <FaLinkedin />
@@ -46,7 +47,7 @@ export default function Project(): React.ReactNode {
             isExternal
             _hover={{
               transform: 'scale(1.2)',
-              color: useColorModeValue('green', 'brand.100'),
+              color: linkColor,
             }}
           >
             <FaGithub />

@@ -12,6 +12,8 @@ import { useTranslation } from 'react-i18next'
 export default function ExperienceProfile(): React.ReactNode {
   const { t } = useTranslation()
 
+  const experienceTextColor = useColorModeValue('black', 'gray.500')
+
   return (
     <Fragment>
       {/* Tomei Consolidated Bhd */}
@@ -23,9 +25,7 @@ export default function ExperienceProfile(): React.ReactNode {
         cursor="pointer"
       >
         <VStack alignSelf="flex-start" align="start" w="30%">
-          <Text color={useColorModeValue('black', 'gray.500')}>
-            JUL 2022 - PRESENT
-          </Text>
+          <Text color={experienceTextColor}>JUL 2022 - PRESENT</Text>
         </VStack>
 
         <VStack flex="1" align="start">
@@ -33,9 +33,7 @@ export default function ExperienceProfile(): React.ReactNode {
           <Heading fontSize="medium" fontWeight="medium">
             Tomei Consolidated Bhd
           </Heading>
-          <Text color={useColorModeValue('black', 'gray.500')}>
-            {t('experience-profile-1')}
-          </Text>
+          <Text color={experienceTextColor}>{t('experience-profile-1')}</Text>
           <HStack gap={2} flexWrap="wrap">
             {[
               'TypeScript',
@@ -49,8 +47,14 @@ export default function ExperienceProfile(): React.ReactNode {
             ].map((item, index) => (
               <Tag
                 key={index}
-                color={useColorModeValue('white', 'black')}
-                bgColor={useColorModeValue('purple', 'brand.100')}
+                _light={{
+                  color: 'white',
+                  bgColor: 'purple',
+                }}
+                _dark={{
+                  color: 'black',
+                  bgColor: 'brand.100',
+                }}
               >
                 {item}
               </Tag>
@@ -68,9 +72,7 @@ export default function ExperienceProfile(): React.ReactNode {
         cursor="pointer"
       >
         <VStack alignSelf="flex-start" align="start" w="30%">
-          <Text color={useColorModeValue('black', 'gray.500')}>
-            OCT 2021 - APR 2022
-          </Text>
+          <Text color={experienceTextColor}>OCT 2021 - APR 2022</Text>
         </VStack>
 
         <VStack flex="1" align="start">
@@ -80,15 +82,19 @@ export default function ExperienceProfile(): React.ReactNode {
           <Heading fontSize="medium" fontWeight="medium">
             Sanbercode
           </Heading>
-          <Text color={useColorModeValue('black', 'gray.500')}>
-            {t('experience-profile-2')}
-          </Text>
+          <Text color={experienceTextColor}>{t('experience-profile-2')}</Text>
           <HStack gap={2} flexWrap="wrap">
             {['Python', 'Pandas', 'Matplotlib', 'NLP'].map((item, index) => (
               <Tag
                 key={index}
-                color={useColorModeValue('white', 'black')}
-                bgColor={useColorModeValue('purple', 'brand.100')}
+                _light={{
+                  color: 'white',
+                  bgColor: 'purple',
+                }}
+                _dark={{
+                  color: 'black',
+                  bgColor: 'brand.100',
+                }}
               >
                 {item}
               </Tag>

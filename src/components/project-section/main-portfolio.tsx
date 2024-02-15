@@ -19,6 +19,8 @@ export default function MainPortfolio({
   isLoading: boolean
   projects: Raindrop[]
 }) {
+  const mainPortfolioTextColor = useColorModeValue('black', 'gray.500')
+
   return (
     <Fragment>
       <VStack
@@ -65,15 +67,19 @@ export default function MainPortfolio({
                     <Heading fontSize="medium" fontWeight="medium">
                       {project.excerpt}
                     </Heading>
-                    <Text color={useColorModeValue('black', 'gray.500')}>
-                      {project.note}
-                    </Text>
+                    <Text color={mainPortfolioTextColor}>{project.note}</Text>
                     <HStack gap={2} flexWrap="wrap">
                       {project.tags.map((item, index) => (
                         <Tag
                           key={index}
-                          color={useColorModeValue('white', 'black')}
-                          bgColor={useColorModeValue('purple', 'brand.100')}
+                          _light={{
+                            color: 'white',
+                            bgColor: 'purple',
+                          }}
+                          _dark={{
+                            color: 'black',
+                            bgColor: 'brand.100',
+                          }}
                         >
                           {item}
                         </Tag>

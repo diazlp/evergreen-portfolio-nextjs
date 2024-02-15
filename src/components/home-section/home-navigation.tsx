@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Heading, Divider, Flex, useColorModeValue } from '@chakra-ui/react'
+import { Heading, Divider, Flex } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { AnimatePresence, Variants, motion } from 'framer-motion'
 import { usePathname, useRouter } from 'next/navigation'
@@ -96,11 +96,16 @@ export default function HomeNavigation(): React.ReactNode {
           >
             <Heading
               fontWeight="normal"
-              color={
-                pathname === route.path
-                  ? useColorModeValue('purple', 'orange')
-                  : ''
-              }
+              _light={{
+                _hover: {
+                  color: pathname !== route.path ? 'green' : '',
+                },
+              }}
+              _dark={{
+                _hover: {
+                  color: pathname !== route.path ? 'brand.100' : '',
+                },
+              }}
             >
               {route.text}
             </Heading>

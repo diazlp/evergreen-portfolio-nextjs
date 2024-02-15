@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Heading, Flex, Mark, useColorModeValue } from '@chakra-ui/react'
+import { Heading, Flex } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { AnimatePresence, Variants, motion } from 'framer-motion'
 import { usePathname, useRouter } from 'next/navigation'
@@ -12,7 +12,6 @@ const flexVariants: Variants = {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
-      // delayChildren: 3,
     },
   },
   exit: {
@@ -98,16 +97,17 @@ export default function SideNavigation(): React.ReactNode {
             <Heading
               fontWeight="normal"
               fontSize="medium"
-              color={
-                pathname === route.path
-                  ? useColorModeValue('purple', 'orange')
-                  : 'initial'
-              }
-              _hover={{
-                color:
-                  pathname !== route.path
-                    ? useColorModeValue('green', 'brand.100')
-                    : '',
+              _light={{
+                color: pathname === route.path ? 'purple' : '',
+                _hover: {
+                  color: pathname !== route.path ? 'green' : '',
+                },
+              }}
+              _dark={{
+                color: pathname === route.path ? 'orange' : '',
+                _hover: {
+                  color: pathname !== route.path ? 'brand.100' : '',
+                },
               }}
             >
               {route.text}

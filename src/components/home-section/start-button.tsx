@@ -53,6 +53,7 @@ const arrowVariants: Variants = {
 export default function StartButton(): React.ReactNode {
   const { t } = useTranslation()
 
+  const startButtonColor = useColorModeValue('purple', 'brand.100')
   const router = useRouter()
   const [routePath, setRoutePath] = useState<string>('')
 
@@ -61,7 +62,7 @@ export default function StartButton(): React.ReactNode {
       <HStack
         as={motion.div}
         key={routePath}
-        color={useColorModeValue('purple', 'brand.100')}
+        color={startButtonColor}
         position="fixed"
         alignSelf="flex-end"
         bottom={10}
@@ -82,7 +83,7 @@ export default function StartButton(): React.ReactNode {
         <Box
           as={motion.div}
           key={routePath}
-          color={useColorModeValue('purple', 'brand.100')}
+          color={startButtonColor}
           initial="initial"
           animate="enter"
           variants={arrowVariants}
