@@ -10,8 +10,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Home | Diaz Linggaputra',
-  description:
-    'This Personal Portfolio that you are currently seeing right now. I craft with purpose.',
+  description: 'Diaz Linggaputra Personal Website Portfolio',
   authors: [{ name: 'Diaz Linggaputra' }],
 }
 
