@@ -11,7 +11,7 @@ import {
 import '@fontsource/roboto-mono'
 
 const config: ThemeConfig = {
-  initialColorMode: 'light',
+  initialColorMode: 'dark',
   useSystemColorMode: false,
 }
 
