@@ -5,11 +5,12 @@ import {
   Text,
   HStack,
   Heading,
-  useColorModeValue,
-  Tag,
   Link,
+  Tag,
+  useColorModeValue,
 } from '@chakra-ui/react'
 import { Raindrop } from '@/hooks/useProject'
+import LoadingSkeleton from './loading-skeleton'
 
 export default function MainPortfolio({
   isLoading,
@@ -20,7 +21,16 @@ export default function MainPortfolio({
 }) {
   return (
     <Fragment>
-      <VStack w="full" gap={{ base: 10, md: 14 }} className="group/list">
+      <VStack
+        w="full"
+        gap={{ base: 10, md: 14 }}
+        className="group/list"
+        minW="37vw"
+      >
+        {Array.from({ length: 3 }).map(
+          (_, index) => isLoading && <LoadingSkeleton key={index} />,
+        )}
+
         {projects?.length &&
           projects.map((project: Raindrop, i) => {
             return (
