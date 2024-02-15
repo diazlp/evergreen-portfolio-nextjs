@@ -1,9 +1,10 @@
 import React from 'react'
 import { Variants, motion } from 'framer-motion'
-import { Container, Stack, VStack, Spacer, Text } from '@chakra-ui/react'
+import { Container, Stack, VStack, Spacer } from '@chakra-ui/react'
+import { Raindrop } from '@/hooks/useProject'
 import BasicProfile from '../basic-profile'
-import AboutProfile from '../about-section/about-profile'
 import SkillProfile from './skill-profile'
+import MainPortfolio from './main-portfolio'
 
 const variants: Variants = {
   hidden: {
@@ -26,7 +27,13 @@ const variants: Variants = {
   },
 }
 
-export default function ProjectSection(): React.ReactNode {
+export default function ProjectSection({
+  isLoading,
+  projects,
+}: {
+  isLoading: boolean
+  projects: Raindrop[]
+}): React.ReactNode {
   return (
     <Container
       as={motion.div}
@@ -73,7 +80,7 @@ export default function ProjectSection(): React.ReactNode {
           w={{ base: '100%', md: '50%' }}
           gap={5}
         >
-          <AboutProfile />
+          <MainPortfolio isLoading={isLoading} projects={projects} />
         </VStack>
       </Stack>
     </Container>

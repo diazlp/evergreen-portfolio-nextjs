@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { HStack, Flex } from '@chakra-ui/react'
 import ThemeButtonComponent from './theme-button'

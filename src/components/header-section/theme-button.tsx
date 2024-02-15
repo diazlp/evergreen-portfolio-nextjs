@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import { IconButton, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import { AnimatePresence, Variants, motion } from 'framer-motion'

@@ -1,5 +1,3 @@
-'use client'
-
 import { availableLanguages } from '@/i18n/settings'
 import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'

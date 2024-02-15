@@ -4,13 +4,16 @@ import React from 'react'
 import { Box, VStack, Link, useColorModeValue } from '@chakra-ui/react'
 import ProjectSection from '@/components/project-section'
 import FooterSection from '@/components/footer-section'
-import { FaGithub, FaLinkedin, FaMedium, FaWhatsapp } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
 import { GITHUB_LINK, LINKEDIN_LINK, WHATSAPP_LINK } from '@/utils/constants'
+import useProject from '@/hooks/useProject'
 
 export default function Project(): React.ReactNode {
+  const { isLoading, projects } = useProject()
+
   return (
     <Box>
-      <ProjectSection />
+      <ProjectSection isLoading={isLoading} projects={projects} />
       <FooterSection>
         <VStack
           gap={5}

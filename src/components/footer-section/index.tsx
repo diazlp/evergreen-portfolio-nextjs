@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, VStack, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, VStack, useColorModeValue } from '@chakra-ui/react'
 
 export default function FooterSection({
   children,
