@@ -7,6 +7,9 @@ export async function GET() {
       headers: {
         Authorization: `Bearer ${process.env.RAINDROP_TOKEN}`,
       },
+      next: {
+        revalidate: 10,
+      },
     },
   )
 
