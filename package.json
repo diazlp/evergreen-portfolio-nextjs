@@ -1,6 +1,6 @@
 {
   "name": "personal-portfolio-nextjs",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "My personal portfolio written in Next.js TypeScript.",
   "private": true,
   "author": "Diaz Linggaputra",
