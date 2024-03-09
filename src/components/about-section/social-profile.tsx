@@ -2,22 +2,24 @@ import React from 'react'
 import { HStack, Link, useColorModeValue } from '@chakra-ui/react'
 import {
   FaGithub,
+  FaGitlab,
   FaLinkedin,
   FaInstagram,
   FaQuora,
   FaStackOverflow,
-  FaMedium,
+  // FaMedium,
   FaWhatsapp,
 } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import {
   GITHUB_LINK,
+  GITLAB_LINK,
   LINKEDIN_LINK,
   EMAIL_LINK,
   INSTAGRAM_LINK,
   QUORA_LINK,
   STACKOVERFLOW_LINK,
-  MEDIUM_LINK,
+  // MEDIUM_LINK,
   WHATSAPP_LINK,
 } from '@/utils/constants'
 
@@ -86,7 +88,7 @@ export default function SocialProfile(): React.ReactNode {
       >
         <FaStackOverflow />
       </Link>
-      <Link
+      {/* <Link
         href={MEDIUM_LINK}
         isExternal
         _hover={{
@@ -95,6 +97,16 @@ export default function SocialProfile(): React.ReactNode {
         }}
       >
         <FaMedium />
+      </Link> */}
+      <Link
+        href={GITLAB_LINK}
+        isExternal
+        _hover={{
+          transform: 'scale(1.2)',
+          color: socialLinkColor,
+        }}
+      >
+        <FaGitlab />
       </Link>
       <Link
         href={WHATSAPP_LINK}
