@@ -4,7 +4,7 @@ export const LINKEDIN_LINK: string =
   'https://www.linkedin.com/in/diazlinggaputra/'
 export const CV_LINK_INTERNAL: string = './diazlinggaputra-cv.pdf'
 export const CV_LINK_EXTERNAL: string =
-  'https://drive.google.com/file/d/1izj-KmvgWp4i41DeKkdOnkA7XUiZnvN9/view?usp=sharing'
+  'https://drive.google.com/file/d/184Eofkrog3vmam1ujMjbyVoCpOQCTL5n/view?usp=sharing'
 
 export const INSTAGRAM_LINK: string = 'https://www.instagram.com/diazlp'
 export const EMAIL_LINK: string = 'mailto:diazlinggaputra@gmail.com'
