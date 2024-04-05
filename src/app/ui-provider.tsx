@@ -9,6 +9,7 @@ import {
   theme as base,
 } from '@chakra-ui/react'
 import '@fontsource/roboto-mono'
+import { CSSObject } from '@emotion/react'
 
 const config: ThemeConfig = {
   initialColorMode: 'dark',
@@ -26,6 +27,13 @@ const fonts = {
 }
 
 const theme = extendTheme({
+  styles: {
+    global: (props: CSSObject) => ({
+      body: {
+        bg: props.colorMode === 'dark' ? '#0f172a' : 'white',
+      },
+    }),
+  },
   colors,
   config,
   fonts,
