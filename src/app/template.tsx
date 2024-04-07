@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import { Variants, motion } from 'framer-motion'
-import MousePointer from '@/components/mouse-pointer'
 
 const pageVariants: Variants = {
   initial: { opacity: 0, y: -20 },
@@ -27,7 +26,6 @@ export default function Template({
       key="page"
     >
       {children}
-      <MousePointer />
     </motion.main>
   )
 }
