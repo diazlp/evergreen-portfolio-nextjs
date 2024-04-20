@@ -28,7 +28,7 @@ const MousePointer: React.FC = () => {
 
   return (
     <div
-      className="hidden lg:fixed top-0 left-0 w-[100vw] h-[100vw] pointer-events-none"
+      className="hidden lg:block fixed top-0 left-0 w-[100vw] h-[100vw] pointer-events-none"
       style={backgroundStyle}
     />
   )
