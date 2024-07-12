@@ -8,6 +8,8 @@ Explore Diaz's work through a captivating animation that adds a touch of sophist
 
 [Home | Diaz Linggaputra](https://diazlinggaputra.vercel.app/)
 
+## Table of Contents
+
 ## Getting Started
 
 First, run the development server:
