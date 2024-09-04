@@ -9,3 +9,7 @@ Explore Diaz's work through a captivating animation that adds a touch of sophist
 [Home | Diaz Linggaputra](https://diazlinggaputra.vercel.app/)
 
 ## Table of Contents
+
+## License
+
+This project is licensed under the [MIT License](https://github.com/diazlp/Ikiwae?tab=MIT-1-ov-file). You are permitted to use, modify, and distribute this project for both personal and commercial purposes, provided that the copyright notice **Diaz Linggaputra** remains intact in all copies or substantial portions of the project.
